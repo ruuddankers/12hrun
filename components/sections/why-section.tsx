@@ -28,7 +28,7 @@ export function WhySection() {
               timing, herstel en balans.
             </p>
             <p>
-              In endurance running komen dezelfde thema's terug. Je past aan,
+              In endurance running komen dezelfde thema&apos;s terug. Je past aan,
               bewaakt wat er gebeurt, reageert op pieken en dalen en gaat door
               wanneer het ongemakkelijk wordt.
             </p>
