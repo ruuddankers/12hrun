@@ -72,7 +72,7 @@ export default function DonatePage() {
           </div>
         </div>
       </section>
-      <EventMarquee children="Support the mission - Stichting DON - 12h.run" />
+      <EventMarquee>Support the mission - Stichting DON - 12h.run</EventMarquee>
     </main>
   );
 }

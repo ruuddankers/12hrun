@@ -83,7 +83,7 @@ export function HeroSection() {
           </Reveal>
         </div>
       </div>
-      <EventMarquee children="12 rondes - 12 uur - een gedeeld ritme" />
+      <EventMarquee>12 rondes - 12 uur - een gedeeld ritme</EventMarquee>
       <a
         href="#concept"
         className="absolute bottom-10 left-1/2 hidden -translate-x-1/2 items-center gap-2 rounded-full border border-foreground/12 bg-background/70 px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-foreground/62 backdrop-blur md:flex"

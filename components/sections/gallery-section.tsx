@@ -5,7 +5,7 @@ import { EventMarquee } from "@/components/shared/event-marquee";
 export function GallerySection() {
   return (
     <section className="py-20 md:py-28">
-      <EventMarquee children="Muziek van voeten - warme lampen - koude lucht" />
+      <EventMarquee>Muziek van voeten - warme lampen - koude lucht</EventMarquee>
       <div className="container-page mt-10 px-3 md:px-5">
         <Reveal>
           <div className="grid gap-6 md:grid-cols-[0.9fr_1.1fr] md:items-end">

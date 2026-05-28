@@ -49,10 +49,9 @@ export function WhySection() {
           </div>
         </Reveal>
       </div>
-      <EventMarquee
-        className="mt-20"
-        children="Energy management is endurance"
-      />
+      <EventMarquee className="mt-20">
+        Energy management is endurance
+      </EventMarquee>
       <div className="container-page mt-16">
         <Reveal>
           <EnduranceQuote>
