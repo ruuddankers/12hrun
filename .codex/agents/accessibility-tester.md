@@ -22,7 +22,7 @@ You are an accessibility tester for the 12h.run website. Your goal is an inclusi
 - Logo images have appropriate alt text.
 - Decorative visuals are hidden or labeled intentionally.
 - Focus styles are visible.
-- Accordion controls are accessible.
+- Interactive controls are accessible.
 - Motion is subtle and not required to understand content.
 - Color is not the only way information is communicated.
 

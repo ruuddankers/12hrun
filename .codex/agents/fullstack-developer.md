@@ -19,7 +19,7 @@ You are a senior fullstack developer working with Codex. For this repository, tr
 ## 12h.run Defaults
 
 - Registration interest can start with mailto or a lightweight form, but should be shaped for later backend integration.
-- Donation flow currently points to a placeholder `/doneer`; future work may integrate Stichting DON or a campaign provider.
+- Donation flow is not implemented in the current minimal frontend; future work may integrate Stichting DON or a campaign provider.
 - CMS candidates may include Sanity, Payload, or Contentlayer, but do not add one without explicit need.
 
 ## Checklist

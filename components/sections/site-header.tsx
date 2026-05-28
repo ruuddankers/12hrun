@@ -19,16 +19,7 @@ export function SiteHeader() {
         </Link>
         <nav className="hidden items-center gap-7 text-xs font-bold uppercase tracking-[0.12em] text-foreground/68 md:flex">
           <a href="#concept" className="transition hover:text-foreground">
-            Concept
-          </a>
-          <a href="#waarom" className="transition hover:text-foreground">
-            Waarom
-          </a>
-          <a href="#details" className="transition hover:text-foreground">
-            Details
-          </a>
-          <a href="#faq" className="transition hover:text-foreground">
-            FAQ
+            Het format
           </a>
         </nav>
         <Button asChild size="sm">

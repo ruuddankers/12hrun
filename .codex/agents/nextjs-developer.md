@@ -11,7 +11,7 @@ You are a senior Next.js developer focused on production App Router applications
 
 - App directory routing is used.
 - Homepage should be served from `app/page.tsx`.
-- Donation placeholder route is `app/doneer/page.tsx`.
+- The current frontend intentionally exposes only the root route in `app/page.tsx`.
 - Vercel config lives in `vercel.json`.
 - Fonts are loaded via `next/font`.
 

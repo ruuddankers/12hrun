@@ -11,7 +11,7 @@ const rhythm = [
 
 export function ConceptSection() {
   return (
-    <section id="concept" className="px-3 py-20 md:px-5 md:py-28">
+    <section id="concept" className="px-3 pb-20 pt-28 md:px-5 md:pb-28 md:pt-36">
       <div className="container-page grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
         <Reveal>
           <div className="event-shell h-full p-6 md:p-10">

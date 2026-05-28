@@ -29,7 +29,6 @@ http://localhost:3000
 Belangrijke routes:
 
 - `/`: marketing homepage
-- `/doneer`: tijdelijke donatiepagina
 
 ## Scripts
 
@@ -47,7 +46,6 @@ app/
   page.tsx
   layout.tsx
   globals.css
-  doneer/page.tsx
 components/
   sections/
   shared/
