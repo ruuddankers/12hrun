@@ -1,5 +1,4 @@
 import { Reveal } from "@/components/motion/reveal";
-import { RecoveryTimeline } from "@/components/shared/recovery-timeline";
 import { SectionIntro } from "@/components/shared/section-intro";
 
 const rhythm = [
@@ -12,9 +11,9 @@ const rhythm = [
 export function ConceptSection() {
   return (
     <section id="concept" className="px-3 pb-20 pt-28 md:px-5 md:pb-28 md:pt-36">
-      <div className="container-page grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+      <div className="container-page">
         <Reveal>
-          <div className="event-shell h-full p-6 md:p-10">
+          <div className="event-shell p-6 md:p-10">
             <SectionIntro
               eyebrow="Het format"
               title="Run. Recover. Repeat."
@@ -38,24 +37,6 @@ export function ConceptSection() {
                 </div>
               ))}
             </div>
-          </div>
-        </Reveal>
-        <Reveal delay={0.12}>
-          <div className="event-shell cinematic-panel h-full p-6 md:p-10">
-            <div className="mb-8 flex flex-wrap items-end justify-between gap-5">
-              <div>
-                <p className="text-xs font-black uppercase tracking-[0.22em] text-accent">
-                  12 uur ritme
-                </p>
-                <h3 className="display-tight mt-3 text-4xl font-black uppercase md:text-6xl">
-                  effort / rest
-                </h3>
-              </div>
-              <p className="max-w-56 text-sm font-medium leading-6 text-foreground/58">
-                De herstelruimte wordt ieder uur belangrijker dan de snelheid.
-              </p>
-            </div>
-            <RecoveryTimeline />
           </div>
         </Reveal>
       </div>
