@@ -12,11 +12,11 @@ export function SectionIntro({
   className?: string;
 }) {
   return (
-    <div className={cn("max-w-3xl", className)}>
-      <p className="mb-5 text-xs font-semibold uppercase tracking-[0.22em] text-accent">
+    <div className={cn("max-w-4xl", className)}>
+      <p className="mb-5 text-xs font-black uppercase tracking-[0.22em] text-accent">
         {eyebrow}
       </p>
-      <h2 className="display-tight text-4xl font-bold leading-[1.02] text-foreground md:text-6xl">
+      <h2 className="display-tight text-5xl font-black uppercase leading-[0.92] text-foreground md:text-7xl lg:text-8xl">
         {title}
       </h2>
       {body ? (

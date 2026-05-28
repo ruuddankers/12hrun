@@ -6,18 +6,18 @@ import { interestMailto } from "@/lib/utils";
 
 export function FinalCtaSection() {
   return (
-    <section className="px-4 pb-6">
+    <section className="px-3 pb-3 pt-16 md:px-5 md:pt-24">
       <Reveal>
-        <div className="cinematic-panel mx-auto max-w-[1380px] rounded-sm px-6 py-20 text-center md:px-12 md:py-28">
-          <p className="mb-6 text-xs font-semibold uppercase tracking-[0.24em] text-accent">
+        <div className="event-shell cinematic-panel mx-auto max-w-[1500px] px-5 py-16 text-center md:px-12 md:py-24">
+          <p className="mb-6 text-xs font-black uppercase tracking-[0.24em] text-accent">
             Eerste editie
           </p>
-          <h2 className="display-tight mx-auto max-w-4xl text-5xl font-extrabold leading-[0.98] md:text-8xl">
-            Alleen een kleine groep start aan het eerste uur.
+          <h2 className="display-tight mx-auto max-w-6xl text-[clamp(3.5rem,12vw,11rem)] font-black uppercase leading-[0.75]">
+            Start mee in het eerste uur.
           </h2>
-          <p className="mx-auto mt-7 max-w-2xl text-lg leading-8 text-foreground/70">
-            Geen massa. Geen luide finishboog. Wel twaalf gedeelde momenten om
-            opnieuw te beginnen.
+          <p className="mx-auto mt-8 max-w-2xl text-lg font-medium leading-8 text-foreground/70">
+            Een kleine groep. Twaalf gedeelde starts. Een event dat rustig
+            begint en langzaam groter wordt dan de afstand.
           </p>
           <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
             <Button asChild size="lg">

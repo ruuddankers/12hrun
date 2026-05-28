@@ -2,37 +2,57 @@ import { Reveal } from "@/components/motion/reveal";
 import { RecoveryTimeline } from "@/components/shared/recovery-timeline";
 import { SectionIntro } from "@/components/shared/section-intro";
 
+const rhythm = [
+  ["01", "Start samen", "Ieder uur klinkt dezelfde afspraak: opnieuw naar buiten."],
+  ["02", "Loop 5 km", "Niet maximaal, maar precies genoeg om later nog terug te komen."],
+  ["03", "Herstel", "Eten, drinken, zitten, schoenen los, hoofd stil."],
+  ["04", "Herhaal", "Twaalf keer wordt hetzelfde ritueel een andere ervaring."]
+];
+
 export function ConceptSection() {
   return (
-    <section id="concept" className="py-24 md:py-36">
-      <div className="container-page grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+    <section id="concept" className="px-3 py-20 md:px-5 md:py-28">
+      <div className="container-page grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
         <Reveal>
-          <SectionIntro
-            eyebrow="Het format"
-            title="Lopen. Herstellen. Herhalen."
-            body="Elk uur start iedereen samen aan een nieuwe ronde van 5 km. De tijd die overblijft binnen dat uur is je herstel. Na een paar rondes gaat het niet meer alleen over tempo, maar over jezelf blijven managen."
-          />
-          <div className="mt-10 grid gap-4 text-lg leading-8 text-foreground/72">
-            <p>Sneller lopen geeft meer rust. Te snel lopen kost energie.</p>
-            <p>
-              De uitdaging groeit uur na uur: voeding, timing, focus, benen,
-              stilte en het vermogen om opnieuw te starten.
-            </p>
+          <div className="event-shell h-full p-6 md:p-10">
+            <SectionIntro
+              eyebrow="Het format"
+              title="Run. Recover. Repeat."
+              body="12h.run is eenvoudig genoeg om meteen te begrijpen, en zwaar genoeg om langzaam persoonlijk te worden."
+            />
+            <div className="mt-12 grid gap-px overflow-hidden rounded-[1.35rem] border border-foreground/12 bg-foreground/12">
+              {rhythm.map(([number, title, body]) => (
+                <div
+                  key={number}
+                  className="grid gap-4 bg-background/70 p-5 md:grid-cols-[5rem_1fr]"
+                >
+                  <span className="display-tight text-5xl font-black text-accent">
+                    {number}
+                  </span>
+                  <div>
+                    <h3 className="display-tight text-2xl font-black uppercase">
+                      {title}
+                    </h3>
+                    <p className="mt-2 leading-7 text-foreground/66">{body}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </Reveal>
-        <Reveal delay={0.15}>
-          <div className="cinematic-panel soft-border rounded-sm p-5 md:p-8">
-            <div className="mb-8 flex items-end justify-between gap-6">
+        <Reveal delay={0.12}>
+          <div className="event-shell cinematic-panel h-full p-6 md:p-10">
+            <div className="mb-8 flex flex-wrap items-end justify-between gap-5">
               <div>
-                <p className="text-xs uppercase tracking-[0.22em] text-accent">
+                <p className="text-xs font-black uppercase tracking-[0.22em] text-accent">
                   12 uur ritme
                 </p>
-                <h3 className="display-tight mt-3 text-3xl font-bold">
-                  inspanning en herstel
+                <h3 className="display-tight mt-3 text-4xl font-black uppercase md:text-6xl">
+                  effort / rest
                 </h3>
               </div>
-              <p className="hidden max-w-48 text-right text-sm leading-6 text-foreground/58 sm:block">
-                De herstelruimte wordt mentaal steeds kostbaarder.
+              <p className="max-w-56 text-sm font-medium leading-6 text-foreground/58">
+                De herstelruimte wordt ieder uur belangrijker dan de snelheid.
               </p>
             </div>
             <RecoveryTimeline />

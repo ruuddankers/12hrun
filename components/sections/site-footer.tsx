@@ -4,8 +4,8 @@ import { AnimatedDotSystem } from "@/components/shared/animated-dot-system";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-foreground/10 py-12">
-      <div className="container-page flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+    <footer className="px-3 py-10 md:px-5">
+      <div className="container-page event-shell flex flex-col gap-10 p-6 md:flex-row md:items-end md:justify-between md:p-8">
         <div>
           <Image
             src="/12hrun-logo.svg"
@@ -14,14 +14,14 @@ export function SiteFooter() {
             height={61}
             className="h-9 w-auto"
           />
-          <p className="mt-4 max-w-md text-sm leading-6 text-foreground/56">
+          <p className="mt-5 max-w-md text-sm font-medium leading-6 text-foreground/56">
             12h.run is een kleinschalig endurance event in ontwikkeling voor
             juni 2027.
           </p>
         </div>
         <div className="flex items-center gap-6">
           <AnimatedDotSystem compact />
-          <div className="grid gap-2 text-sm text-foreground/62">
+          <div className="grid gap-2 text-sm font-bold uppercase tracking-[0.12em] text-foreground/62">
             <Link href="/doneer" className="hover:text-foreground">
               Doneren
             </Link>

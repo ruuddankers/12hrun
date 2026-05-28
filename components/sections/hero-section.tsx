@@ -1,61 +1,92 @@
 import Link from "next/link";
-import { ArrowDown, HeartHandshake } from "lucide-react";
+import { ArrowDown, HeartHandshake, MapPin } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
 import { AnimatedDotSystem } from "@/components/shared/animated-dot-system";
+import { EventMarquee } from "@/components/shared/event-marquee";
 import { Button } from "@/components/ui/button";
 import { interestMailto } from "@/lib/utils";
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-[94svh] overflow-hidden pt-28">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_24%,rgba(240,105,57,0.22),transparent_22rem),linear-gradient(180deg,rgba(17,17,17,0.18),#111111_88%)]" />
-      <div className="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-background to-transparent" />
-      <div className="container-page relative grid min-h-[calc(94svh-7rem)] items-center gap-12 py-12 lg:grid-cols-[1.05fr_0.95fr]">
-        <Reveal>
-          <div>
-            <p className="mb-7 text-xs font-semibold uppercase tracking-[0.28em] text-accent">
-              Eerste editie · juni 2027 · omgeving Berkel
-            </p>
-            <h1 className="display-tight max-w-4xl text-6xl font-extrabold leading-[0.94] text-foreground md:text-8xl lg:text-9xl">
-              12 rondes.
-              <br />
-              12 uur.
-              <br />
-              Een gedeeld ritme.
-            </h1>
-            <p className="mt-8 max-w-2xl text-lg leading-8 text-foreground/72 md:text-2xl md:leading-9">
-              Een boutique endurance experience gebouwd rond ritme, herstel en
-              veerkracht.
-            </p>
-            <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-              <Button asChild size="lg">
-                <a href={interestMailto}>Meld interesse</a>
-              </Button>
-              <Button asChild variant="outline" size="lg">
-                <Link href="/doneer">
-                  <HeartHandshake className="h-5 w-5" />
-                  Support de missie
-                </Link>
-              </Button>
+    <section className="relative overflow-hidden px-3 pb-3 pt-24 md:px-5 md:pt-28">
+      <div className="event-shell relative min-h-[calc(100svh-7rem)] overflow-hidden px-4 py-6 md:px-8 md:py-8">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_68%_18%,rgba(240,105,57,0.24),transparent_24rem),linear-gradient(180deg,rgba(17,17,17,0.08),#111111_86%)]" />
+        <div className="absolute inset-x-0 top-24 h-px bg-foreground/12" />
+        <div className="relative flex min-h-[calc(100svh-11rem)] flex-col justify-between gap-10">
+          <Reveal>
+            <div className="grid gap-4 pt-2 text-xs font-black uppercase tracking-[0.18em] text-foreground/72 md:grid-cols-3">
+              <a href="#details" className="inline-flex items-center gap-2 hover:text-foreground">
+                <MapPin className="h-4 w-4 text-accent" />
+                Omgeving Berkel
+              </a>
+              <span className="hidden text-center md:block">Juni 2027</span>
+              <span className="hidden text-right md:block">12 x 5 km</span>
             </div>
+          </Reveal>
+
+          <div className="grid items-end gap-8 lg:grid-cols-[1fr_18rem]">
+            <Reveal>
+              <div>
+                <p className="mb-5 max-w-xl text-sm font-bold uppercase tracking-[0.16em] text-accent md:text-base">
+                  Boutique endurance event voor ritme, herstel en veerkracht.
+                </p>
+                <h1 className="display-tight text-[clamp(4.6rem,17vw,15.5rem)] font-black uppercase leading-[0.72] text-foreground">
+                  12h
+                  <br />
+                  run
+                </h1>
+              </div>
+            </Reveal>
+            <Reveal delay={0.15}>
+              <div className="grid gap-5">
+                <div className="relative flex aspect-square items-center justify-center rounded-full border border-foreground/12 bg-background/42">
+                  <div className="absolute inset-8 rounded-full border border-accent/20" />
+                  <AnimatedDotSystem className="w-52" />
+                </div>
+                <p className="text-lg font-medium leading-7 text-foreground/76">
+                  Iedereen start elk uur samen. Wat je overhoudt, is herstel.
+                  Wat zich opstapelt, is het echte werk.
+                </p>
+                <div className="flex flex-col gap-3">
+                  <Button asChild size="lg">
+                    <a href={interestMailto}>Meld interesse</a>
+                  </Button>
+                  <Button asChild variant="outline" size="lg">
+                    <Link href="/doneer">
+                      <HeartHandshake className="h-5 w-5" />
+                      Support DON
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+            </Reveal>
           </div>
-        </Reveal>
-        <Reveal delay={0.2}>
-          <div className="relative mx-auto flex aspect-square w-full max-w-[520px] items-center justify-center">
-            <div className="absolute inset-10 rounded-full border border-foreground/10" />
-            <div className="absolute inset-24 rounded-full border border-accent/20" />
-            <AnimatedDotSystem className="w-64 md:w-80" />
-            <div className="absolute bottom-6 left-1/2 flex -translate-x-1/2 items-center gap-3 rounded-full border border-foreground/12 bg-background/58 px-4 py-2 text-xs uppercase tracking-[0.18em] text-foreground/68 backdrop-blur">
-              <span>12 x 5 km</span>
-              <span className="h-1 w-1 rounded-full bg-accent" />
-              <span>60 km max</span>
+
+          <Reveal delay={0.22}>
+            <div className="grid gap-px overflow-hidden rounded-[1.35rem] border border-foreground/12 bg-foreground/12 md:grid-cols-4">
+              {[
+                ["Volume", "01"],
+                ["Duur", "12 uur"],
+                ["Afstand", "60 km max"],
+                ["Deelnemers", "20-25"]
+              ].map(([label, value]) => (
+                <div key={label} className="bg-background/72 p-5">
+                  <p className="text-[0.68rem] font-black uppercase tracking-[0.2em] text-foreground/44">
+                    {label}
+                  </p>
+                  <p className="display-tight mt-3 text-3xl font-black uppercase md:text-5xl">
+                    {value}
+                  </p>
+                </div>
+              ))}
             </div>
-          </div>
-        </Reveal>
+          </Reveal>
+        </div>
       </div>
+      <EventMarquee children="12 rondes - 12 uur - een gedeeld ritme" />
       <a
         href="#concept"
-        className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 items-center gap-2 text-xs uppercase tracking-[0.24em] text-foreground/52 md:flex"
+        className="absolute bottom-10 left-1/2 hidden -translate-x-1/2 items-center gap-2 rounded-full border border-foreground/12 bg-background/70 px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-foreground/62 backdrop-blur md:flex"
       >
         Scroll
         <ArrowDown className="h-4 w-4" />

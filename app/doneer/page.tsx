@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, HeartHandshake, Mail } from "lucide-react";
 import { AnimatedDotSystem } from "@/components/shared/animated-dot-system";
+import { EventMarquee } from "@/components/shared/event-marquee";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
@@ -13,15 +14,15 @@ export const metadata: Metadata = {
 
 export default function DonatePage() {
   return (
-    <main className="min-h-screen px-4 py-6">
-      <section className="cinematic-panel mx-auto flex min-h-[calc(100vh-3rem)] max-w-[1380px] flex-col rounded-sm px-6 py-8 md:px-12">
-        <header className="flex items-center justify-between gap-4">
+    <main className="min-h-screen px-3 py-3 md:px-5">
+      <section className="event-shell cinematic-panel relative min-h-[calc(100vh-1.5rem)] overflow-hidden px-5 py-6 md:min-h-[calc(100vh-2.5rem)] md:px-10 md:py-8">
+        <header className="relative z-10 flex items-center justify-between gap-4">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-sm text-foreground/62 transition hover:text-foreground"
+            className="inline-flex items-center gap-2 rounded-full border border-foreground/14 bg-background/50 px-4 py-2 text-xs font-black uppercase tracking-[0.14em] text-foreground/72 transition hover:text-foreground"
           >
             <ArrowLeft className="h-4 w-4" />
-            Terug naar 12h.run
+            Terug
           </Link>
           <Image
             src="/12hrun-logo.svg"
@@ -32,15 +33,15 @@ export default function DonatePage() {
           />
         </header>
 
-        <div className="grid flex-1 items-center gap-12 py-16 lg:grid-cols-[1fr_0.75fr]">
+        <div className="relative z-10 grid min-h-[calc(100vh-13rem)] items-end gap-12 py-16 lg:grid-cols-[1fr_20rem]">
           <div>
-            <p className="mb-6 text-xs font-semibold uppercase tracking-[0.24em] text-accent">
+            <p className="mb-6 text-xs font-black uppercase tracking-[0.24em] text-accent">
               Stichting DON
             </p>
-            <h1 className="display-tight max-w-4xl text-5xl font-extrabold leading-[0.98] md:text-8xl">
-              De donatieflow krijgt straks een eigen ritme.
+            <h1 className="display-tight max-w-6xl text-[clamp(3.5rem,12vw,11rem)] font-black uppercase leading-[0.75]">
+              De missie krijgt een eigen ritme.
             </h1>
-            <p className="mt-8 max-w-2xl text-lg leading-8 text-foreground/72 md:text-xl">
+            <p className="mt-8 max-w-2xl text-lg font-medium leading-8 text-foreground/72 md:text-xl">
               Deze pagina is voorbereid voor de campagne rond de eerste editie.
               Totdat de officiële donatielink klaarstaat, gebruiken we deze plek
               om de missie helder te houden: meer aandacht en middelen voor
@@ -66,11 +67,12 @@ export default function DonatePage() {
             </div>
           </div>
 
-          <div className="mx-auto flex aspect-square w-full max-w-sm items-center justify-center rounded-full border border-foreground/12 bg-background/40">
+          <div className="mx-auto flex aspect-square w-full max-w-80 items-center justify-center rounded-full border border-foreground/12 bg-background/42">
             <AnimatedDotSystem className="w-56" />
           </div>
         </div>
       </section>
+      <EventMarquee children="Support the mission - Stichting DON - 12h.run" />
     </main>
   );
 }

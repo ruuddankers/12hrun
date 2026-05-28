@@ -12,7 +12,7 @@ export function CinematicImagePlaceholder({
   return (
     <div
       className={cn(
-        "relative min-h-72 overflow-hidden rounded-sm soft-border",
+        "relative min-h-72 overflow-hidden rounded-[1.75rem] soft-border",
         className
       )}
     >
@@ -28,10 +28,13 @@ export function CinematicImagePlaceholder({
         )}
       />
       <div className="absolute inset-0 bg-[linear-gradient(120deg,transparent,rgba(233,233,231,0.08),transparent)]" />
-      <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between gap-4 text-xs uppercase tracking-[0.2em] text-foreground/62">
+      <div className="absolute left-5 top-5 rounded-full border border-foreground/14 bg-background/48 px-3 py-2 text-[0.65rem] font-bold uppercase tracking-[0.18em] text-foreground/72 backdrop-blur">
+        foto volgt
+      </div>
+      <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between gap-4 text-xs font-bold uppercase tracking-[0.2em] text-foreground/76">
         <span>{label}</span>
         <span className="h-px flex-1 bg-foreground/18" />
-        <span>foto volgt</span>
+        <span>12h.run</span>
       </div>
     </div>
   );

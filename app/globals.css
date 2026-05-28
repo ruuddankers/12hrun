@@ -31,8 +31,9 @@ body {
   min-height: 100vh;
   margin: 0;
   background:
-    radial-gradient(circle at 20% 0%, rgb(240 105 57 / 0.11), transparent 28rem),
-    linear-gradient(180deg, #111111 0%, #131313 46%, #0f0f0f 100%);
+    radial-gradient(circle at 82% 8%, rgb(240 105 57 / 0.16), transparent 24rem),
+    radial-gradient(circle at 12% 36%, rgb(233 233 231 / 0.07), transparent 22rem),
+    linear-gradient(180deg, #111111 0%, #151310 42%, #0f0f0f 100%);
   color: var(--foreground);
   font-family: var(--font-geist), Arial, sans-serif;
   text-rendering: optimizeLegibility;
@@ -63,7 +64,7 @@ a {
 }
 
 .container-page {
-  width: min(100% - 2rem, 1180px);
+  width: min(100% - 1.25rem, 1340px);
   margin-inline: auto;
 }
 
@@ -78,9 +79,44 @@ a {
 
 .cinematic-panel {
   background:
-    linear-gradient(135deg, rgb(233 233 231 / 0.07), transparent 42%),
-    linear-gradient(180deg, rgb(240 105 57 / 0.1), transparent 72%),
+    radial-gradient(circle at 80% 20%, rgb(240 105 57 / 0.18), transparent 18rem),
+    linear-gradient(135deg, rgb(233 233 231 / 0.08), transparent 42%),
     #171717;
+}
+
+.event-shell {
+  border-radius: 28px;
+  border: 1px solid rgb(233 233 231 / 0.14);
+  background: rgb(233 233 231 / 0.035);
+  box-shadow: inset 0 1px 0 rgb(233 233 231 / 0.08);
+}
+
+.dot-divider {
+  height: 0.45rem;
+  width: 0.45rem;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 24px rgb(240 105 57 / 0.45);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  min-width: 200%;
+  animation: marquee 30s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 @keyframes accordion-down {
