@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
-
-const geist = Geist({
-  subsets: ["latin"],
-  variable: "--font-geist",
-  display: "swap"
-});
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: "swap"
+});
+
+const benzin = localFont({
+  src: "../public/fonts/Benzin-Bold.ttf",
+  variable: "--font-benzin",
+  weight: "700",
   display: "swap"
 });
 
@@ -26,7 +28,7 @@ export const metadata: Metadata = {
     "endurance running event",
     "ultra running Nederland",
     "boutique running event",
-    "backyard ultra geïnspireerd",
+    "backyard ultra geinspireerd",
     "charity endurance event",
     "Type 1 Diabetes fundraiser",
     "Stichting DON"
@@ -51,7 +53,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="nl" className={`${geist.variable} ${inter.variable}`}>
+    <html lang="nl" className={`${benzin.variable} ${inter.variable}`}>
       <body>{children}</body>
     </html>
   );

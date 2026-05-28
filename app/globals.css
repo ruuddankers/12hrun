@@ -7,8 +7,8 @@
   --color-muted: #9d9d97;
   --color-panel: #171717;
   --color-line: rgb(233 233 231 / 0.14);
-  --font-sans: var(--font-geist);
-  --font-display: var(--font-inter);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-benzin);
 }
 
 :root {
@@ -35,7 +35,7 @@ body {
     radial-gradient(circle at 12% 36%, rgb(233 233 231 / 0.07), transparent 22rem),
     linear-gradient(180deg, #111111 0%, #151310 42%, #0f0f0f 100%);
   color: var(--foreground);
-  font-family: var(--font-geist), Arial, sans-serif;
+  font-family: var(--font-inter), Arial, sans-serif;
   text-rendering: optimizeLegibility;
 }
 
@@ -69,7 +69,7 @@ a {
 }
 
 .display-tight {
-  font-family: var(--font-inter), Arial, sans-serif;
+  font-family: var(--font-benzin), var(--font-inter), Arial, sans-serif;
   letter-spacing: 0;
 }
 
