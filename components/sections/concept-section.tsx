@@ -16,7 +16,7 @@ export function ConceptSection() {
           <div className="event-shell p-6 md:p-10">
             <SectionIntro
               eyebrow="Het format"
-              title="Run. Recover. Repeat."
+              title="12 uur lang. 5 kilometer per uur"
               body="12h.run is eenvoudig genoeg om meteen te begrijpen, en zwaar genoeg om langzaam persoonlijk te worden."
             />
             <div className="mt-12 grid gap-px overflow-hidden rounded-[1.35rem] border border-foreground/12 bg-foreground/12">
