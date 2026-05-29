@@ -1,9 +1,24 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export function SiteHeader() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-40 flex h-20 items-center justify-center bg-background/60 backdrop-blur-xl">
+    <header
+      className={`sticky top-0 z-40 flex h-20 items-center justify-center transition-all duration-500 ${
+        scrolled ? "bg-background/60 backdrop-blur-xl" : "bg-transparent"
+      }`}
+    >
       <Link href="/" aria-label="12h.run home">
         <Image
           src="/12h-run-logo-text.svg"

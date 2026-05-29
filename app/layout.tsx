@@ -20,7 +20,7 @@ const benzin = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL("https://12h.run"),
   title: {
-    default: "12h.run | Boutique endurance event in Nederland",
+    default: "12h.run Berkel-Enschot",
     template: "%s | 12h.run"
   },
   description:

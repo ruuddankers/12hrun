@@ -4,25 +4,20 @@ const NAMES = [
   "Fleur", "Joost", "Roos", "Sander", "Iris", "Tom",
 ];
 
-const ticker = NAMES.join("  &  ") + "  &  ";
+const TICKER_ITEMS = NAMES.flatMap((name, i) => [
+  <span key={`n-${i}`}>{name}</span>,
+  <span key={`s-${i}`} className="text-white"> &amp; </span>,
+]);
 
-function TickerRow({
-  reverse = false,
-  duration = "60s",
-}: {
-  reverse?: boolean;
-  duration?: string;
-}) {
+function TickerRow({ duration = "60s" }: { duration?: string }) {
   return (
     <div className="flex overflow-hidden">
       <div
-        className="flex shrink-0 whitespace-nowrap font-[family-name:var(--font-benzin)] text-4xl font-black uppercase leading-none tracking-tight text-background sm:text-5xl md:text-6xl lg:text-7xl"
-        style={{
-          animation: `ticker-${reverse ? "rtl" : "ltr"} ${duration} linear infinite`,
-        }}
+        className="flex shrink-0 items-baseline whitespace-nowrap font-[family-name:var(--font-benzin)] text-4xl font-black uppercase leading-none tracking-tight text-background sm:text-5xl md:text-6xl lg:text-7xl"
+        style={{ animation: `ticker-ltr ${duration} linear infinite` }}
       >
-        <span>{ticker}</span>
-        <span>{ticker}</span>
+        <span className="flex items-baseline">{TICKER_ITEMS}</span>
+        <span className="flex items-baseline">{TICKER_ITEMS}</span>
       </div>
     </div>
   );
@@ -30,12 +25,10 @@ function TickerRow({
 
 export function TickerSection() {
   return (
-    <section className="w-full overflow-hidden bg-accent py-4 md:py-6">
-      <div className="flex flex-col gap-3">
+    <div className="overflow-hidden">
+      <section className="-mx-16 rotate-[-4deg] bg-accent py-4 md:py-5">
         <TickerRow duration="60s" />
-        <TickerRow reverse duration="52s" />
-        <TickerRow duration="68s" />
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }
