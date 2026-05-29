@@ -15,7 +15,7 @@ export default function Doneren() {
       <main>
         {/* Hero */}
         <section className="relative -mt-20 bg-background px-3 md:px-5">
-          <div className="container-page px-6 pb-16 pt-40 md:px-10 md:pt-52">
+          <div className="container-page [border-inline:none] px-6 pb-16 pt-40 md:px-10 md:pt-52">
             <Reveal>
               <p className="mb-4 text-xs font-bold uppercase tracking-[0.14em] text-accent">
                 12h.run × Stichting DON
@@ -94,12 +94,12 @@ export default function Doneren() {
 
         {/* Terug */}
         <section className="bg-background px-3 pb-16 pt-4 md:px-5">
-          <div className="container-page px-6 md:px-8">
+          <div className="container-page [border-inline:none] px-6 md:px-8">
             <Link
               href="/"
               className="text-xs font-bold uppercase tracking-[0.12em] text-foreground/40 transition-colors hover:text-foreground"
             >
-              ← Terug naar 12h.run
+              ← Terug
             </Link>
           </div>
         </section>

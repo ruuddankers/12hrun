@@ -38,7 +38,7 @@ function IconDoneren() {
 }
 
 const NAV_ITEMS = [
-  { href: "#over", label: "Over", icon: <IconOver /> },
+  { href: "/", label: "Over", icon: <IconOver /> },
   { href: "#sponsors", label: "Sponsors", icon: <IconSponsors /> },
   { href: "#info", label: "Info", icon: <IconInfo /> },
   { href: "/doneren", label: "Doneren", icon: <IconDoneren /> },
