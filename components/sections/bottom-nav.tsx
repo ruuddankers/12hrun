@@ -43,17 +43,17 @@ const NAV_ITEMS = [
 export function BottomNav() {
   return (
     <nav
-      className="fixed bottom-6 left-1/2 z-50 -translate-x-1/2"
+      className="fixed bottom-6 left-1/2 z-50 -translate-x-1/2 !bg-transparent"
       aria-label="Hoofdnavigatie"
     >
-      <div className="flex items-center gap-1 rounded-[20px] border border-foreground/10 bg-[rgba(17,17,17,0.78)] px-2 py-2 shadow-[0_8px_32px_rgba(0,0,0,0.6)] backdrop-blur-2xl">
+      <div className="flex items-center gap-1 overflow-hidden rounded-[20px] border border-foreground/10 bg-[rgba(17,17,17,0.78)] px-2 py-2 shadow-[0_8px_32px_rgba(0,0,0,0.6)] backdrop-blur-2xl">
         {NAV_ITEMS.map((item) => (
           <a
             key={item.href}
             href={item.href}
-            className="flex flex-col items-center gap-1 rounded-2xl px-4 py-2 text-foreground/56 transition-colors hover:bg-foreground/8 hover:text-foreground md:flex-row md:py-2.5"
+            className="flex flex-col items-center gap-1 rounded-2xl px-4 py-2 text-foreground/56 transition-colors hover:bg-foreground/8 hover:text-foreground"
           >
-            <span className="md:hidden">{item.icon}</span>
+            {item.icon}
             <span className="text-[9px] font-bold uppercase tracking-[0.12em] md:text-xs md:tracking-[0.1em]">
               {item.label}
             </span>

@@ -4,7 +4,7 @@ const NAMES = [
   "Fleur", "Joost", "Roos", "Sander", "Iris", "Tom",
 ];
 
-const ticker = NAMES.join("  ·  ") + "  ·  ";
+const ticker = NAMES.join("  &  ") + "  &  ";
 
 function TickerRow({
   reverse = false,
