@@ -100,3 +100,24 @@ a {
   background: var(--accent);
   box-shadow: 0 0 24px rgb(240 105 57 / 0.45);
 }
+
+.leaflet-container,
+.leaflet-control,
+.leaflet-control a,
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  border-radius: 0 !important;
+}
+
+.leaflet-control-attribution {
+  border-top: 1px solid rgb(233 233 231 / 0.14) !important;
+  border-left: 1px solid rgb(233 233 231 / 0.14) !important;
+  background: rgb(17 17 17 / 0.82) !important;
+  color: rgb(233 233 231 / 0.56) !important;
+  font-family: var(--font-inter), Arial, sans-serif !important;
+  font-size: 10px !important;
+}
+
+.leaflet-control-attribution a {
+  color: rgb(233 233 231 / 0.72) !important;
+}
