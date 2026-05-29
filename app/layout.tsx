@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
+import { BottomNav } from "@/components/sections/bottom-nav";
 import "./globals.css";
 
 const inter = Inter({
@@ -54,7 +55,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="nl" className={`${benzin.variable} ${inter.variable}`}>
-      <body>{children}</body>
+      <body>
+        <div className="pb-28">{children}</div>
+        <BottomNav />
+      </body>
     </html>
   );
 }
