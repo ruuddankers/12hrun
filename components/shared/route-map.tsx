@@ -163,7 +163,14 @@ export function RouteMap() {
           .addTo(map);
 
         const isMobile = window.innerWidth < 768;
-        map.fitBounds(route.getBounds(), { padding: isMobile ? [40, 40] : [110, 110] });
+        if (isMobile) {
+          map.fitBounds(route.getBounds(), {
+            paddingTopLeft: [40, 110],
+            paddingBottomRight: [40, 40],
+          });
+        } else {
+          map.fitBounds(route.getBounds(), { padding: [110, 110] });
+        }
       } catch {
         // Keep the map silent; the route is decorative context for the hero.
       }

@@ -7,11 +7,11 @@
 
 ## TAKEN DIE JE MOET DOORVOEREN
 
-- Ik wil dat je de lijntje links en rechts van de tekst 12 uur lang. 5 km per uur. weghaalt. 
-- Haal de horizontale lijn boven de footer weg
-- Zet onder 5 KM PER UUR. de tekst: 60 KM RUN.
-- Maak een nieuw blok, in lijn met de footer, met een titel: 12H Run van Berkel-Enschot en een lorem iipsum tekst eronder. Lijn dit links uit in het kader en zet rechts een placeholder afbeelding.
-
+- op mobiel hoeft de header met logo erin niet sticky te zijn. 
+- op mobiel zit er nog veel ruimte tussen de ticker en de tekst erboven (23 mei 2027). Die mogen gewoon aansluiten zoals eronder.
+- de kaart en vooral de route mogen iets meer ruimte krijgen op mobiel een de bovenkant. De route staat nu dicht op het logo erboven. Niet uitzoomen, maar klein beetje verhogen gewoon.
+- maak eenzelfde blok als 12h run van berkel-enschot voor Sponsors, (logo wall moet dit worden zonder titel, zet hier placholder afbeeldingen) en Info (dit moet een balk worden met 4 vierkanten met icoon en tekst).
+- maak een aparte donatiepagina. in design van de rest, maak zelf een eerste opzet.
 
 
 
@@ -21,6 +21,7 @@
 
 ## Notities
 
+- Als je klaar bent met het wijzigen van de taken, push de wijzigingen dan direct naar main
 - Werk altijd in TypeScript strict mode
 - UI copy altijd in het Nederlands
 - Toon: kalm, filmisch, premium — geen sportmarketingclichés

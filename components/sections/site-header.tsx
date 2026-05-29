@@ -15,7 +15,7 @@ export function SiteHeader() {
 
   return (
     <header
-      className={`sticky top-0 z-40 flex h-20 items-center justify-center transition-all duration-500 ${
+      className={`relative z-40 flex h-20 items-center justify-center transition-all duration-500 md:sticky md:top-0 ${
         scrolled ? "bg-background/60 backdrop-blur-xl" : "bg-transparent"
       }`}
     >

@@ -37,7 +37,7 @@ const NAV_ITEMS = [
   { href: "#over", label: "Over", icon: <IconOver /> },
   { href: "#sponsors", label: "Sponsors", icon: <IconSponsors /> },
   { href: "#info", label: "Info", icon: <IconInfo /> },
-  { href: "mailto:hello@12h.run", label: "Doneren", icon: <IconDoneren /> },
+  { href: "/doneren", label: "Doneren", icon: <IconDoneren /> },
 ];
 
 export function BottomNav() {

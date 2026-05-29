@@ -5,10 +5,10 @@ export function ConceptSection() {
   return (
     <section
       id="concept"
-      className="relative -mt-20 min-h-svh overflow-hidden bg-background px-0"
+      className="relative -mt-20 overflow-hidden bg-background px-0 md:min-h-svh"
     >
       <RouteMap />
-      <div className="pointer-events-none relative z-10 -mt-28 mx-auto w-full max-w-[1340px] px-6 pb-20 pt-0 text-center md:-mt-36 md:px-10 md:pb-28">
+      <div className="pointer-events-none relative z-10 -mt-28 mx-auto w-full max-w-[1340px] px-6 pb-4 pt-0 text-center md:-mt-36 md:px-10 md:pb-28">
         <Reveal>
           <h1 className="display-tight mx-auto grid max-w-4xl gap-2 text-4xl font-black uppercase leading-[1.02] text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
             <span>12 uur lang.</span>
