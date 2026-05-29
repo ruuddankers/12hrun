@@ -8,7 +8,7 @@ export function ConceptSection() {
     >
       <div className="container-page px-6 py-20 text-center md:px-10 md:py-28">
         <Reveal>
-          <h1 className="display-tight mx-auto max-w-6xl text-5xl font-black uppercase leading-[0.94] text-foreground md:text-8xl lg:text-9xl">
+          <h1 className="display-tight mx-auto max-w-4xl text-4xl font-black uppercase leading-[1.02] text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
             12 uur lang.
             <br />
             5 kilometer per uur.
