@@ -5,26 +5,27 @@ import { interestMailto } from "@/lib/utils";
 
 export function SiteHeader() {
   return (
-    <header className="fixed left-0 right-0 top-4 z-40">
-      <div className="container-page flex h-16 items-center justify-between gap-5 rounded-full border border-foreground/14 bg-background/68 px-3 pl-5 backdrop-blur-2xl md:px-4 md:pl-6">
-        <Link href="/" className="flex items-center gap-3" aria-label="12h.run home">
-          <Image
-            src="/12hrun-logo.svg"
-            alt="12h.run"
-            width={132}
-            height={54}
-            priority
-            className="h-7 w-auto md:h-8"
-          />
+    <header className="sticky left-0 right-0 top-0 z-40 border-b border-foreground/14 bg-background/82 backdrop-blur-xl">
+      <div className="grid h-16 grid-cols-[1fr_auto] border-x border-foreground/10 md:grid-cols-[14rem_1fr_auto]">
+        <Link
+          href="/"
+          className="flex items-center border-r border-foreground/14 px-5"
+          aria-label="12h.run home"
+        >
+          <Image src="/12hrun-logo.svg" alt="12h.run" width={132} height={54} priority className="h-7 w-auto" />
         </Link>
-        <nav className="hidden items-center gap-7 text-xs font-bold uppercase tracking-[0.12em] text-foreground/68 md:flex">
+        <nav className="hidden items-center gap-8 px-6 text-xs font-bold uppercase tracking-[0.12em] text-foreground/68 md:flex">
           <a href="#concept" className="transition hover:text-foreground">
             Het format
           </a>
+          <span className="text-foreground/28">Juni 2027</span>
+          <span className="text-foreground/28">Omgeving Berkel</span>
         </nav>
-        <Button asChild size="sm">
-          <a href={interestMailto}>Interesse</a>
-        </Button>
+        <div className="flex items-center border-l border-foreground/14 p-2">
+          <Button asChild size="sm">
+            <a href={interestMailto}>Interesse</a>
+          </Button>
+        </div>
       </div>
     </header>
   );

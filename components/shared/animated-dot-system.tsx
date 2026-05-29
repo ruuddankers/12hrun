@@ -29,7 +29,7 @@ export function AnimatedDotSystem({
         return (
           <motion.span
             key={dot}
-            className="absolute left-1/2 top-1/2 rounded-full bg-accent"
+            className="absolute left-1/2 top-1/2 bg-accent"
             style={{
               width: size,
               height: size,

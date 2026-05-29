@@ -10,7 +10,7 @@ const rhythm = [
 
 export function ConceptSection() {
   return (
-    <section id="concept" className="px-3 pb-20 pt-28 md:px-5 md:pb-28 md:pt-36">
+    <section id="concept" className="border-b border-foreground/10 px-0 pb-20 pt-20 md:pb-28 md:pt-28">
       <div className="container-page">
         <Reveal>
           <div className="event-shell p-6 md:p-10">
@@ -19,7 +19,7 @@ export function ConceptSection() {
               title="12 uur lang. 5 kilometer per uur"
               body="12h.run is eenvoudig genoeg om meteen te begrijpen, en zwaar genoeg om langzaam persoonlijk te worden."
             />
-            <div className="mt-12 grid gap-px overflow-hidden rounded-[1.35rem] border border-foreground/12 bg-foreground/12">
+            <div className="mt-12 grid gap-px overflow-hidden border border-foreground/12 bg-foreground/12">
               {rhythm.map(([number, title, body]) => (
                 <div
                   key={number}
