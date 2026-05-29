@@ -25,7 +25,7 @@ function TickerRow({ duration = "60s" }: { duration?: string }) {
 
 export function TickerSection() {
   return (
-    <div className="relative z-10 -my-10 overflow-hidden py-14">
+    <div className="relative z-10 -my-10 overflow-hidden py-14 md:-mt-[90px]">
       <section className="-mx-16 rotate-[-4deg] bg-accent py-4 md:py-5">
         <TickerRow duration="60s" />
       </section>
