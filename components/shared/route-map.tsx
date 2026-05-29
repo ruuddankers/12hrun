@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 type LatLng = [number, number];
 
@@ -75,7 +75,6 @@ function parseGpx(gpx: string) {
 export function RouteMap() {
   const mapElement = useRef<HTMLDivElement>(null);
   const mapInstance = useRef<LeafletMap | null>(null);
-  const [status, setStatus] = useState("Route wordt geladen");
 
   useEffect(() => {
     let cancelled = false;
@@ -103,10 +102,13 @@ export function RouteMap() {
 
         const leaflet = window.L;
         const map = leaflet.map(mapElement.current, {
-          attributionControl: true,
+          attributionControl: false,
           scrollWheelZoom: false,
-          dragging: true,
-          keyboard: true,
+          dragging: false,
+          doubleClickZoom: false,
+          boxZoom: false,
+          touchZoom: false,
+          keyboard: false,
           zoomControl: false
         });
 
@@ -118,7 +120,7 @@ export function RouteMap() {
             "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
             {
               attribution:
-                '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+                "",
               maxZoom: 19
             }
           )
@@ -129,8 +131,8 @@ export function RouteMap() {
             color: "#F06939",
             weight: 5,
             opacity: 0.95,
-            lineCap: "square",
-            lineJoin: "miter"
+            lineCap: "round",
+            lineJoin: "round"
           })
           .addTo(map);
 
@@ -154,10 +156,9 @@ export function RouteMap() {
           })
           .addTo(map);
 
-        map.fitBounds(route.getBounds(), { padding: [34, 34] });
-        setStatus(`${points.length} routepunten geladen`);
+        map.fitBounds(route.getBounds(), { padding: [110, 110] });
       } catch {
-        setStatus("Route kon niet geladen worden");
+        // Keep the map silent; the route is decorative context for the hero.
       }
     }
 
@@ -171,12 +172,9 @@ export function RouteMap() {
   }, []);
 
   return (
-    <div className="relative h-[70svh] min-h-[30rem] overflow-hidden border-y border-foreground/14 bg-background">
-      <div ref={mapElement} className="h-full w-full grayscale-[0.25]" />
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(17,17,17,0.08),rgba(17,17,17,0)_38%,rgba(17,17,17,0.28))]" />
-      <div className="absolute left-0 top-0 border-b border-r border-foreground/14 bg-background/84 px-4 py-3 text-xs font-bold uppercase tracking-[0.14em] text-foreground/68 backdrop-blur">
-        {status}
-      </div>
+    <div className="relative h-[68svh] min-h-[28rem] overflow-hidden bg-background md:h-[72svh]">
+      <div ref={mapElement} className="h-full w-full grayscale-[0.18] opacity-80" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(17,17,17,0)_18%,rgba(17,17,17,0.42)_58%,#111111_92%),linear-gradient(180deg,#111111_0%,rgba(17,17,17,0.12)_20%,rgba(17,17,17,0.08)_54%,#111111_100%)]" />
     </div>
   );
 }

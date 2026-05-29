@@ -25,9 +25,6 @@ export function SiteHeader() {
           <a href="#concept" className="transition hover:text-foreground">
             Het format
           </a>
-          <a href="#route" className="transition hover:text-foreground">
-            Route
-          </a>
           <span className="text-foreground/28">23 mei 2027</span>
           <span className="text-foreground/28">Berkel-Enschot</span>
         </nav>

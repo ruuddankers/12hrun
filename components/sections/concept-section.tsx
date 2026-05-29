@@ -1,12 +1,14 @@
 import { Reveal } from "@/components/motion/reveal";
+import { RouteMap } from "@/components/shared/route-map";
 
 export function ConceptSection() {
   return (
     <section
       id="concept"
-      className="flex min-h-[calc(100svh-4rem)] items-center border-b border-foreground/10 px-0 py-20"
+      className="relative min-h-[calc(100svh-5rem)] overflow-hidden border-b border-foreground/10 px-0"
     >
-      <div className="container-page px-6 py-20 text-center md:px-10 md:py-28">
+      <RouteMap />
+      <div className="container-page pointer-events-none relative z-10 -mt-28 px-6 pb-20 pt-0 text-center md:-mt-36 md:px-10 md:pb-28">
         <Reveal>
           <h1 className="display-tight mx-auto grid max-w-4xl gap-2 text-4xl font-black uppercase leading-[1.02] text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
             <span>12 uur lang.</span>
