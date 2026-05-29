@@ -24,19 +24,20 @@
 
 html {
   scroll-behavior: smooth;
-  background: var(--background);
+  background: #111111;
 }
 
 body {
   min-height: 100vh;
   margin: 0;
-  background:
-    radial-gradient(circle at 82% 8%, rgb(240 105 57 / 0.16), transparent 24rem),
-    radial-gradient(circle at 12% 36%, rgb(233 233 231 / 0.07), transparent 22rem),
-    linear-gradient(180deg, #111111 0%, #151310 42%, #0f0f0f 100%);
+  background: #111111;
   color: var(--foreground);
   font-family: var(--font-inter), Arial, sans-serif;
   text-rendering: optimizeLegibility;
+}
+
+body > * {
+  background-color: #111111;
 }
 
 body::before {
@@ -77,13 +78,6 @@ a {
 
 .soft-border {
   border: 1px solid rgb(233 233 231 / 0.14);
-}
-
-.cinematic-panel {
-  background:
-    radial-gradient(circle at 80% 20%, rgb(240 105 57 / 0.18), transparent 18rem),
-    linear-gradient(135deg, rgb(233 233 231 / 0.08), transparent 42%),
-    #171717;
 }
 
 .event-shell {

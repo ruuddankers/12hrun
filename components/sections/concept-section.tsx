@@ -5,7 +5,7 @@ export function ConceptSection() {
   return (
     <section
       id="concept"
-      className="relative min-h-[calc(100svh-5rem)] overflow-hidden border-b border-foreground/10 px-0"
+      className="relative min-h-[calc(100svh-5rem)] overflow-hidden border-b border-foreground/10 bg-background px-0"
     >
       <RouteMap />
       <div className="container-page pointer-events-none relative z-10 -mt-28 px-6 pb-20 pt-0 text-center md:-mt-36 md:px-10 md:pb-28">

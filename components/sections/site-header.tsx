@@ -5,7 +5,7 @@ import { interestMailto } from "@/lib/utils";
 
 export function SiteHeader() {
   return (
-    <header className="sticky left-0 right-0 top-0 z-40 border-b border-foreground/14 bg-background/82 backdrop-blur-xl">
+    <header className="sticky left-0 right-0 top-0 z-40 border-b border-foreground/14 bg-background backdrop-blur-xl">
       <div className="grid h-20 grid-cols-[1fr_auto] border-x border-foreground/10 md:grid-cols-[20rem_1fr_auto]">
         <Link
           href="/"

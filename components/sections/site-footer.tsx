@@ -3,7 +3,7 @@ import { AnimatedDotSystem } from "@/components/shared/animated-dot-system";
 
 export function SiteFooter() {
   return (
-    <footer className="px-3 py-10 md:px-5">
+    <footer className="bg-background px-3 py-10 md:px-5">
       <div className="container-page event-shell flex flex-col gap-10 p-6 md:flex-row md:items-end md:justify-between md:p-8">
         <div>
           <Image
