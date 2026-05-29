@@ -24,6 +24,11 @@ type LeafletApi = {
     point: LatLng,
     options: Record<string, unknown>
   ) => { addTo: (map: LeafletMap) => unknown };
+  marker: (
+    point: LatLng,
+    options: Record<string, unknown>
+  ) => { addTo: (map: LeafletMap) => unknown };
+  divIcon: (options: Record<string, unknown>) => unknown;
 };
 
 declare global {
@@ -138,7 +143,7 @@ export function RouteMap() {
 
         leaflet
           .circleMarker(points[0], {
-            radius: 6,
+            radius: 4,
             color: "#E9E9E7",
             fillColor: "#F06939",
             fillOpacity: 1,
@@ -146,17 +151,19 @@ export function RouteMap() {
           })
           .addTo(map);
 
+        const finishIcon = leaflet.divIcon({
+          html: `<svg width="14" height="20" viewBox="0 0 14 20" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="2" height="20" fill="#E9E9E7"/><polygon points="2,1 13,5 2,9" fill="#E9E9E7"/></svg>`,
+          iconSize: [14, 20],
+          iconAnchor: [1, 20],
+          className: "",
+        });
+
         leaflet
-          .circleMarker(points[points.length - 1], {
-            radius: 6,
-            color: "#E9E9E7",
-            fillColor: "#111111",
-            fillOpacity: 1,
-            weight: 2
-          })
+          .marker(points[points.length - 1], { icon: finishIcon })
           .addTo(map);
 
-        map.fitBounds(route.getBounds(), { padding: [110, 110] });
+        const isMobile = window.innerWidth < 768;
+        map.fitBounds(route.getBounds(), { padding: isMobile ? [40, 40] : [110, 110] });
       } catch {
         // Keep the map silent; the route is decorative context for the hero.
       }
