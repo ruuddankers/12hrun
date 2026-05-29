@@ -14,7 +14,7 @@ export function ConceptSection() {
             <span>12 uur lang.</span>
             <span>5 KM per uur.</span>
           </h1>
-          <p className="mt-8 text-sm font-bold uppercase tracking-[0.18em] text-foreground/62 md:text-base">
+          <p className="mt-8 text-sm font-bold uppercase tracking-[0.18em] text-foreground/78 md:text-base">
             23 mei 2027 - Berkel-Enschot
           </p>
         </Reveal>
