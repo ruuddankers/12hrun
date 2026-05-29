@@ -7,11 +7,11 @@ export function SiteFooter() {
       <div className="container-page event-shell flex flex-col gap-10 p-6 md:flex-row md:items-end md:justify-between md:p-8">
         <div>
           <Image
-            src="/12hrun-logo.svg"
+            src="/12h-run-logo-text.svg"
             alt="12h.run"
-            width={150}
-            height={61}
-            className="h-9 w-auto"
+            width={220}
+            height={69}
+            className="h-10 w-auto md:h-12"
           />
           <p className="mt-5 max-w-md text-sm font-medium leading-6 text-foreground/56">
             12h.run is een kleinschalig endurance event in ontwikkeling voor
