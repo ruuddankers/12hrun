@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { AnimatedDotSystem } from "@/components/shared/animated-dot-system";
 
 export function SiteFooter() {
   return (
@@ -18,13 +17,10 @@ export function SiteFooter() {
             juni 2027.
           </p>
         </div>
-        <div className="flex items-center gap-6">
-          <AnimatedDotSystem compact />
-          <div className="grid gap-2 text-sm font-bold uppercase tracking-[0.12em] text-foreground/62">
-            <a href="mailto:hello@12h.run" className="hover:text-foreground">
-              Contact
-            </a>
-          </div>
+        <div className="grid gap-2 text-sm font-bold uppercase tracking-[0.12em] text-foreground/62">
+          <a href="mailto:hello@12h.run" className="hover:text-foreground">
+            Contact
+          </a>
         </div>
       </div>
     </footer>

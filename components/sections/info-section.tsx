@@ -48,6 +48,11 @@ export function InfoSection() {
   return (
     <section id="info" className="bg-background px-3 py-10 md:px-5">
       <div className="container-page event-shell overflow-hidden">
+        <div className="border-b border-foreground/[0.14] px-6 py-4">
+          <h2 className="display-tight text-xl font-black uppercase text-foreground">
+            Praktische Info
+          </h2>
+        </div>
         <div className="grid grid-cols-2 divide-x divide-y divide-foreground/8 md:grid-cols-4 md:divide-y-0">
           {INFO_ITEMS.map((item, i) => (
             <div key={i} className="flex flex-col gap-4 p-6 md:p-8">
