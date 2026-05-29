@@ -95,6 +95,16 @@ a {
   box-shadow: 0 0 24px rgb(240 105 57 / 0.45);
 }
 
+@keyframes ticker-ltr {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes ticker-rtl {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
 .leaflet-container,
 .leaflet-control,
 .leaflet-control a,

@@ -173,7 +173,7 @@ export function RouteMap() {
 
   return (
     <div className="relative -mt-[100px] h-[calc(68svh+100px)] min-h-[calc(28rem+100px)] overflow-hidden bg-[#111111] md:h-[calc(72svh+100px)]">
-      <div ref={mapElement} className="h-full w-full grayscale-[0.18] opacity-80" />
+      <div ref={mapElement} className="h-full w-full grayscale-[0.18] opacity-95" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(17,17,17,0)_18%,rgba(17,17,17,0.42)_58%,#111111_92%),linear-gradient(180deg,#111111_0%,rgba(17,17,17,0.12)_20%,rgba(17,17,17,0.08)_54%,#111111_100%)]" />
     </div>
   );
