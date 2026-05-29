@@ -6,7 +6,7 @@ const NAMES = [
 
 const TICKER_ITEMS = NAMES.flatMap((name, i) => [
   <span key={`n-${i}`}>{name}</span>,
-  <span key={`s-${i}`} className="text-white"> &amp; </span>,
+  <span key={`s-${i}`} className="px-[0.3em] text-white">&</span>,
 ]);
 
 function TickerRow({ duration = "60s" }: { duration?: string }) {
@@ -25,7 +25,7 @@ function TickerRow({ duration = "60s" }: { duration?: string }) {
 
 export function TickerSection() {
   return (
-    <div className="overflow-hidden">
+    <div className="relative z-10 -my-10 overflow-hidden py-14">
       <section className="-mx-16 rotate-[-4deg] bg-accent py-4 md:py-5">
         <TickerRow duration="60s" />
       </section>
