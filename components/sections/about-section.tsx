@@ -6,7 +6,9 @@ export function AboutSection() {
       <div className="container-page event-shell overflow-hidden">
         <div className="border-b border-foreground/[0.14] px-6 py-4">
           <h2 className="display-tight text-xl font-black uppercase text-foreground">
-            12H Run Berkel-Enschot
+            12H Run{" "}
+            <br className="md:hidden" />
+            <span className="whitespace-nowrap">Berkel-Enschot</span>
           </h2>
         </div>
         <div className="p-6 md:p-10">
