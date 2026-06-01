@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
 function IconOver() {
@@ -39,14 +40,20 @@ function IconDoneren() {
 
 const NAV_ITEMS = [
   { href: "/", label: "Over", icon: <IconOver /> },
-  { href: "#partners", label: "Partners", icon: <IconSponsors /> },
   { href: "#info", label: "Info", icon: <IconInfo /> },
-  { href: "/doneren", label: "Doneren", icon: <IconDoneren /> },
+  { href: "#partners", label: "Partners", icon: <IconSponsors /> },
 ];
 
 export function BottomNav() {
   const pathname = usePathname();
   const isHome = pathname === "/";
+  const [showTip, setShowTip] = useState(false);
+
+  useEffect(() => {
+    if (!showTip) return;
+    const t = setTimeout(() => setShowTip(false), 3000);
+    return () => clearTimeout(t);
+  }, [showTip]);
 
   return (
     <nav
@@ -72,6 +79,27 @@ export function BottomNav() {
             </a>
           );
         })}
+
+        {/* Doneren — tijdelijk uitgeschakeld */}
+        <div className="relative">
+          {showTip && (
+            <div className="absolute bottom-full left-1/2 mb-3 w-56 -translate-x-1/2 rounded-2xl border border-foreground/10 bg-[rgba(17,17,17,0.95)] px-4 py-3 text-center text-[11px] leading-5 text-foreground/62 shadow-lg backdrop-blur-xl">
+              Doneren wordt op een later moment mogelijk.
+            </div>
+          )}
+          <button
+            onClick={() => setShowTip((v) => !v)}
+            onMouseEnter={() => setShowTip(true)}
+            onMouseLeave={() => setShowTip(false)}
+            className="flex flex-col items-center gap-1 rounded-2xl px-4 py-2 text-foreground/24 cursor-default"
+            aria-label="Doneren — nog niet beschikbaar"
+          >
+            <IconDoneren />
+            <span className="text-[9px] font-bold uppercase tracking-[0.12em] md:text-xs md:tracking-[0.1em]">
+              Doneren
+            </span>
+          </button>
+        </div>
       </div>
     </nav>
   );

@@ -5,10 +5,10 @@ import { SiteFooter } from "@/components/sections/site-footer";
 import { SiteHeader } from "@/components/sections/site-header";
 
 export const metadata: Metadata = {
-  title: "Zakelijk Doneren",
+  title: "Zakelijk",
 };
 
-export default function ZakelijkDoneren() {
+export default function Zakelijk() {
   return (
     <>
       <SiteHeader />
@@ -21,12 +21,12 @@ export default function ZakelijkDoneren() {
                 12H Run Berkel-Enschot × Zakelijke partners
               </p>
               <h1 className="display-tight text-5xl font-black uppercase leading-none text-foreground md:text-7xl">
-                Zakelijk<br />Doneren
+                Zakelijk
               </h1>
               <p className="mt-6 max-w-xl text-base leading-7 text-foreground/62">
-                Als zakelijke partner draag je bij aan wetenschappelijk
-                onderzoek naar Type&nbsp;1 diabetes en ondersteun je een
-                kleinschalig endurance event met een sterk verhaal.
+                Wil je als bedrijf een bijdrage leveren aan dit evenement?
+                Vul dan onderstaand formulier in en we nemen zo snel mogelijk
+                contact met je op.
               </p>
             </Reveal>
           </div>
@@ -84,7 +84,10 @@ export default function ZakelijkDoneren() {
               </div>
               <div className="flex flex-col gap-2">
                 <label className="text-[10px] font-bold uppercase tracking-[0.14em] text-foreground/40">
-                  Telefoonnummer <span className="normal-case tracking-normal text-foreground/24">(optioneel)</span>
+                  Telefoonnummer{" "}
+                  <span className="normal-case tracking-normal text-foreground/24">
+                    (optioneel)
+                  </span>
                 </label>
                 <input
                   type="tel"

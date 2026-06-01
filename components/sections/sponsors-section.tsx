@@ -17,7 +17,7 @@ export function SponsorsSection() {
             />
           ))}
           <Link
-            href="/zakelijk-doneren"
+            href="/zakelijk"
             className="flex aspect-[2/1] items-center justify-center border border-dashed border-foreground/20 bg-panel transition-colors hover:border-accent/60 hover:bg-accent/5"
             aria-label="Word sponsor"
           >
