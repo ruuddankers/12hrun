@@ -47,7 +47,22 @@ export const metadata: Metadata = {
     url: "https://12h.run",
     siteName: "12H Run Berkel-Enschot",
     locale: "nl_NL",
-    type: "website"
+    type: "website",
+    images: [
+      {
+        url: "/social-preview.jpg",
+        width: 1200,
+        height: 630,
+        alt: "12H Run Berkel-Enschot"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "12H Run Berkel-Enschot",
+    description:
+      "12 rondes. 12 uur. Een gedeeld ritme. Een endurance event voor ritme, herstel en veerkracht.",
+    images: ["/social-preview.jpg"]
   },
   icons: {
     icon: "/favicon.svg"
