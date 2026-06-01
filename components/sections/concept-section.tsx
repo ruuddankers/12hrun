@@ -10,14 +10,14 @@ export function ConceptSection() {
       <RouteMap />
       <div className="pointer-events-none relative z-10 -mt-28 mx-auto w-full max-w-[1340px] px-6 pb-4 pt-0 text-center md:-mt-48 md:px-10 md:pb-28">
         <Reveal>
-          <p className="display-tight mb-4 text-sm font-black uppercase text-accent md:text-base">
-            2027 - Berkel-Enschot
-          </p>
           <h1 className="display-tight mx-auto grid max-w-4xl gap-2 text-4xl font-black uppercase leading-[1.02] text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
             <span>12 uur lang.</span>
             <span>5 KM per uur.</span>
             <span>60 KM RUN.</span>
           </h1>
+          <p className="display-tight mt-8 text-sm font-black uppercase text-accent md:text-base">
+            2027 - Berkel-Enschot
+          </p>
         </Reveal>
       </div>
     </section>
