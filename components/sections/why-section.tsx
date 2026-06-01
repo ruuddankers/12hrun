@@ -22,6 +22,12 @@ export function WhySection() {
                   die voortdurend aandacht vraagt.
                 </p>
                 <p>
+                  Tijdens de 12H Run ervaar je hoe bepalend de balans tussen
+                  inspanning en energie kan zijn. Voor mensen met diabetes type
+                  1 is die balans iedere dag opnieuw een uitdaging. Dat maakt
+                  deze uitdaging toepasselijk voor mij en de andere deelnemers.
+                </p>
+                <p>
                   Samen met vrienden, familie, hardlopers, vrijwilligers,
                   sponsors en supporters wil ik zoveel mogelijk geld inzamelen
                   voor Stichting DON en bijdragen aan onderzoek naar een
