@@ -13,7 +13,7 @@ export function SiteFooter() {
             className="h-10 w-auto md:h-12"
           />
           <p className="mt-5 text-sm font-medium text-foreground/56">
-            12H Run Berkel-Enschot | 23 mei 2027
+            12H Run Berkel-Enschot | 2027
           </p>
         </div>
         <div className="grid gap-2 text-sm font-bold uppercase tracking-[0.12em] text-foreground/62">

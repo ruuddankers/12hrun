@@ -106,7 +106,7 @@ export function BottomSection() {
               className="h-8 w-auto md:h-10"
             />
             <p className="hidden text-sm font-medium text-foreground/40 md:block">
-              12H Run Berkel-Enschot | 23 mei 2027
+              12H Run Berkel-Enschot | 2027
             </p>
           </div>
           <a

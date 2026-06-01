@@ -16,7 +16,7 @@ export function ConceptSection() {
             <span>60 KM RUN.</span>
           </h1>
           <p className="mt-8 text-sm font-bold uppercase tracking-[0.18em] text-accent md:text-base">
-            23 mei 2027 - Berkel-Enschot
+            2027 - Berkel-Enschot
           </p>
         </Reveal>
       </div>
