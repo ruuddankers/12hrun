@@ -14,21 +14,23 @@ export function SiteHeader() {
   }, []);
 
   return (
-    <header
-      className={`relative z-40 flex h-20 items-center justify-center transition-all duration-500 md:sticky md:top-0 ${
-        scrolled
-          ? "border-b border-white/[0.06] bg-[rgba(17,17,17,0.52)] shadow-[0_1px_0_rgba(255,255,255,0.04)] backdrop-blur-3xl backdrop-saturate-[180%]"
-          : "bg-transparent"
-      }`}
-    >
-      <Link href="/" aria-label="12h.run home">
+    <header className="relative z-40 flex h-20 items-center justify-center md:sticky md:top-0">
+      <Link
+        href="/"
+        aria-label="12h.run home"
+        className={`rounded-[20px] px-6 py-3 transition-all duration-500 ${
+          scrolled
+            ? "border border-white/[0.09] bg-[rgba(17,17,17,0.52)] shadow-[inset_0_1px_0_rgba(255,255,255,0.07)] backdrop-blur-3xl backdrop-saturate-[180%] md:shadow-[0_8px_40px_rgba(0,0,0,0.55),inset_0_1px_0_rgba(255,255,255,0.07)]"
+            : "border border-transparent bg-transparent"
+        }`}
+      >
         <Image
           src="/12h-run-logo-text.svg"
           alt="12h.run"
           width={256}
           height={80}
           priority
-          className="h-10 w-auto md:h-12"
+          className="h-8 w-auto md:h-10"
         />
       </Link>
     </header>
