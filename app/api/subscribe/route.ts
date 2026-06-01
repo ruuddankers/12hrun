@@ -22,14 +22,13 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  // Use the same public subscription endpoint that Kit's embed script uses.
-  // No API key required — the form UID is the public identifier.
   const body = new URLSearchParams();
   body.append("email_address", email);
   body.append("first_name", firstName);
 
+  // Kit (formerly ConvertKit) — use current app.kit.com domain
   const res = await fetch(
-    `https://app.convertkit.com/forms/${formUid}/subscriptions`,
+    `https://app.kit.com/forms/${formUid}/subscriptions`,
     {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -38,8 +37,9 @@ export async function POST(request: NextRequest) {
   );
 
   if (!res.ok) {
+    const kitBody = await res.text().catch(() => "(geen body)");
     return NextResponse.json(
-      { error: "Aanmelding mislukt. Probeer het opnieuw." },
+      { error: "Aanmelding mislukt.", kitStatus: res.status, kitBody },
       { status: 400 }
     );
   }
