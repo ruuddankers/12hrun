@@ -13,26 +13,22 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const formUid = process.env.KIT_FORM_UID;
+  const apiKey = process.env.KIT_API_KEY;
+  const formId = process.env.KIT_FORM_ID;
 
-  if (!formUid) {
+  if (!apiKey || !formId) {
     return NextResponse.json(
       { error: "Aanmelding is tijdelijk niet beschikbaar." },
       { status: 500 }
     );
   }
 
-  const body = new URLSearchParams();
-  body.append("email_address", email);
-  body.append("first_name", firstName);
-
-  // Kit (formerly ConvertKit) — use current app.kit.com domain
   const res = await fetch(
-    `https://app.kit.com/forms/${formUid}/subscriptions`,
+    `https://api.convertkit.com/v3/forms/${formId}/subscribe`,
     {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: body.toString(),
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ api_key: apiKey, email, first_name: firstName }),
     }
   );
 
