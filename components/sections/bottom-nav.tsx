@@ -59,7 +59,15 @@ export function BottomNav() {
     <nav
       className="fixed bottom-6 left-1/2 z-50 -translate-x-1/2 !bg-transparent"
       aria-label="Hoofdnavigatie"
+      onMouseLeave={() => setShowTip(false)}
     >
+      {/* Tooltip — buiten overflow-hidden pill zodat hij zichtbaar is */}
+      {showTip && (
+        <div className="absolute bottom-full left-1/2 mb-3 w-60 -translate-x-1/2 rounded-2xl border border-foreground/10 bg-[rgba(17,17,17,0.96)] px-4 py-3 text-center text-[11px] leading-5 text-foreground/62 shadow-lg backdrop-blur-xl">
+          Doneren wordt op een later moment mogelijk.
+        </div>
+      )}
+
       <div className="flex items-center gap-1 overflow-hidden rounded-[20px] border border-foreground/10 bg-[rgba(17,17,17,0.78)] px-2 py-2 shadow-[0_8px_32px_rgba(0,0,0,0.6)] backdrop-blur-2xl">
         {NAV_ITEMS.map((item) => {
           const href =
@@ -81,16 +89,9 @@ export function BottomNav() {
         })}
 
         {/* Doneren — tijdelijk uitgeschakeld */}
-        <div className="relative">
-          {showTip && (
-            <div className="absolute bottom-full left-1/2 mb-3 w-56 -translate-x-1/2 rounded-2xl border border-foreground/10 bg-[rgba(17,17,17,0.95)] px-4 py-3 text-center text-[11px] leading-5 text-foreground/62 shadow-lg backdrop-blur-xl">
-              Doneren wordt op een later moment mogelijk.
-            </div>
-          )}
+        <div onMouseEnter={() => setShowTip(true)}>
           <button
             onClick={() => setShowTip((v) => !v)}
-            onMouseEnter={() => setShowTip(true)}
-            onMouseLeave={() => setShowTip(false)}
             className="flex flex-col items-center gap-1 rounded-2xl px-4 py-2 text-foreground/24 cursor-default"
             aria-label="Doneren — nog niet beschikbaar"
           >

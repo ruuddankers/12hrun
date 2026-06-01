@@ -32,7 +32,7 @@ export function AboutSection() {
                 twaalf uur. Ondanks de fantastische zorg in Nederland blijft
                 diabetes type 1 een chronische ziekte die dag en nacht
                 aandacht vraagt. Van het ontbijt tot een training, van een
-                drukke werkdag tot de uren waarin je slaapt: bloedsuikerwaarden
+                drukke dag tot de uren waarin je slaapt: bloedsuikerwaarden
                 spelen altijd mee.
               </p>
               <p className="mb-6">
@@ -44,7 +44,9 @@ export function AboutSection() {
                 het dagelijks leven van duizenden mensen.
               </p>
               <p className="break-inside-avoid font-[family-name:var(--font-caveat)] text-2xl text-accent md:text-3xl">
-                Voor een toekomst zonder diabetes type&nbsp;1.
+                Voor een toekomst zonder{" "}
+                <br className="md:hidden" />
+                diabetes type&nbsp;1.
               </p>
             </div>
           </Reveal>
