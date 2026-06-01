@@ -49,15 +49,14 @@ export function SubscribeSection() {
           <div className="flex-1">
             <p className="text-sm leading-7 text-foreground/62">
               Meld je aan en ontvang updates over 12H Run
-              Berkel-Enschot — inschrijvingen, nieuws en de datum
-              waarop doneren mogelijk wordt.
+              Berkel-Enschot.
             </p>
           </div>
 
           <div className="flex-1">
             {status === "success" ? (
               <p className="text-sm font-semibold text-accent">
-                Aanmelding gelukt. Tot dan!
+                Aanmelding gelukt.
               </p>
             ) : (
               <form onSubmit={handleSubmit} className="flex flex-col gap-4">
