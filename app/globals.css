@@ -65,6 +65,11 @@ a {
   color: #fff7f1;
 }
 
+/* Prevent white flash on Leaflet map init */
+.leaflet-container {
+  background: #111111 !important;
+}
+
 .container-page {
   width: min(100% - 1.25rem, 1340px);
   margin-inline: auto;

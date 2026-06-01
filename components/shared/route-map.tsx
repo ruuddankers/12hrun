@@ -37,6 +37,10 @@ declare global {
   }
 }
 
+// Module-level cache — survives component remounts on navigation
+let cachedPoints: LatLng[] | null = null;
+let leafletReady = false;
+
 function loadAsset(id: string, tag: "script" | "link", url: string) {
   const existing = document.getElementById(id);
 
@@ -86,20 +90,27 @@ export function RouteMap() {
 
     async function initMap() {
       try {
-        await loadAsset(
-          "leaflet-css",
-          "link",
-          "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        );
-        await loadAsset(
-          "leaflet-js",
-          "script",
-          "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        );
+        if (!leafletReady) {
+          await loadAsset(
+            "leaflet-css",
+            "link",
+            "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          );
+          await loadAsset(
+            "leaflet-js",
+            "script",
+            "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          );
+          leafletReady = true;
+        }
 
-        const response = await fetch("/route-12hrun.gpx");
-        const gpx = await response.text();
-        const points = parseGpx(gpx);
+        if (!cachedPoints) {
+          const response = await fetch("/route-12hrun.gpx");
+          const gpx = await response.text();
+          cachedPoints = parseGpx(gpx);
+        }
+
+        const points = cachedPoints;
 
         if (cancelled || !mapElement.current || !window.L || points.length === 0) {
           return;
@@ -124,8 +135,7 @@ export function RouteMap() {
           .tileLayer(
             "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
             {
-              attribution:
-                "",
+              attribution: "",
               maxZoom: 19
             }
           )
@@ -134,8 +144,8 @@ export function RouteMap() {
         const route = leaflet
           .polyline(points, {
             color: "#F06939",
-            weight: 5,
-            opacity: 0.95,
+            weight: 6,
+            opacity: 1,
             lineCap: "round",
             lineJoin: "round"
           })
@@ -187,8 +197,8 @@ export function RouteMap() {
 
   return (
     <div className="relative -mt-[100px] h-[calc(68svh+100px)] min-h-[calc(28rem+100px)] overflow-hidden bg-[#111111] md:h-[calc(72svh+100px)]">
-      <div ref={mapElement} className="h-full w-full grayscale-[0.18] opacity-95" />
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(17,17,17,0)_18%,rgba(17,17,17,0.42)_58%,#111111_92%),linear-gradient(180deg,#111111_0%,rgba(17,17,17,0.12)_20%,rgba(17,17,17,0.08)_54%,#111111_100%)]" />
+      <div ref={mapElement} className="h-full w-full opacity-95" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(17,17,17,0)_10%,rgba(17,17,17,0.28)_55%,#111111_90%),linear-gradient(180deg,#111111_0%,rgba(17,17,17,0.12)_20%,rgba(17,17,17,0.06)_54%,#111111_100%)]" />
     </div>
   );
 }
