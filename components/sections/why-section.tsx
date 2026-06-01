@@ -35,6 +35,20 @@ export function WhySection() {
               <p className="mt-8 font-[family-name:var(--font-caveat)] text-2xl text-background">
                 Ruud Dankers
               </p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <a
+                  href="mailto:dankersruud@gmail.com"
+                  className="display-tight border border-accent px-6 py-2.5 text-sm font-black uppercase tracking-[0.1em] text-accent transition-colors hover:bg-accent/10"
+                >
+                  Ik wil deelnemen
+                </a>
+                <a
+                  href="mailto:dankersruud@gmail.com"
+                  className="display-tight border border-accent px-6 py-2.5 text-sm font-black uppercase tracking-[0.1em] text-accent transition-colors hover:bg-accent/10"
+                >
+                  Ik wil helpen
+                </a>
+              </div>
             </Reveal>
           </div>
           <div className="flex-1 overflow-hidden p-6 md:p-10">

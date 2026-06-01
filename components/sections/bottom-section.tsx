@@ -110,7 +110,7 @@ export function BottomSection() {
             </p>
           </div>
           <a
-            href="mailto:hello@12h.run"
+            href="mailto:dankersruud@gmail.com"
             className="text-sm font-bold uppercase tracking-[0.12em] text-foreground/62 hover:text-foreground"
           >
             Contact
