@@ -68,7 +68,7 @@ export function BottomNav() {
         </div>
       )}
 
-      <div className="flex items-center gap-1 rounded-[20px] border border-white/[0.09] bg-[rgba(17,17,17,0.52)] px-2 py-2 shadow-[0_8px_40px_rgba(0,0,0,0.55),inset_0_1px_0_rgba(255,255,255,0.07)] backdrop-blur-3xl backdrop-saturate-[180%]">
+      <div className="flex items-center gap-1 rounded-[20px] border border-white/[0.09] bg-[rgba(17,17,17,0.52)] px-2 py-2 shadow-[inset_0_1px_0_rgba(255,255,255,0.07)] md:shadow-[0_8px_40px_rgba(0,0,0,0.55),inset_0_1px_0_rgba(255,255,255,0.07)] backdrop-blur-3xl backdrop-saturate-[180%]">
         {NAV_ITEMS.map((item) => {
           const href =
             item.href.startsWith("#") && !isHome
