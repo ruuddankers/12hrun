@@ -3,14 +3,16 @@ import { Reveal } from "@/components/motion/reveal";
 export function AboutSection() {
   return (
     <section id="over" className="bg-background px-3 py-10 md:px-5">
-      <div className="container-page event-shell p-6 md:p-10">
-        <div className="max-w-3xl">
+      <div className="container-page event-shell overflow-hidden">
+        <div className="border-b border-foreground/[0.14] px-6 py-4">
+          <h2 className="display-tight text-xl font-black uppercase text-foreground">
+            12H Run Berkel-Enschot
+          </h2>
+        </div>
+        <div className="p-6 md:p-10">
           <Reveal>
-            <h2 className="display-tight text-2xl font-black uppercase leading-tight text-foreground md:text-3xl">
-              12H Run Berkel-Enschot
-            </h2>
-            <div className="mt-6 flex flex-col gap-5 text-sm leading-7 text-foreground/62">
-              <p>
+            <div className="text-sm leading-7 text-foreground/62 md:columns-2 md:gap-12">
+              <p className="mb-5">
                 Twaalf uur lang draait alles om het vinden van de juiste
                 balans. Wanneer eet je? Wanneer neem je rust? Kun je nog een
                 ronde op hetzelfde tempo door, of is het slimmer om even gas
@@ -22,7 +24,7 @@ export function AboutSection() {
                 in de tank hebt. Naarmate de dag vordert, wordt dat steeds
                 belangrijker.
               </p>
-              <p>
+              <p className="mb-5">
                 Iedere deelnemer ervaart een dag lang hoe bepalend die keuzes
                 kunnen zijn. Voor mensen met diabetes type 1 stopt dat niet na
                 twaalf uur. Ondanks de fantastische zorg in Nederland blijft
@@ -39,10 +41,10 @@ export function AboutSection() {
                 aan een toekomst waarin diabetes type 1 minder impact heeft op
                 het dagelijks leven van duizenden mensen.
               </p>
-              <p className="font-[family-name:var(--font-caveat)] text-2xl text-accent md:text-3xl">
-                Voor een toekomst zonder diabetes type&nbsp;1.
-              </p>
             </div>
+            <p className="mt-8 font-[family-name:var(--font-caveat)] text-2xl text-accent md:text-3xl">
+              Voor een toekomst zonder diabetes type&nbsp;1.
+            </p>
           </Reveal>
         </div>
       </div>
