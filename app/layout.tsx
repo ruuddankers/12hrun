@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "12H Run Berkel-Enschot",
     description:
-      "12 rondes. 12 uur. Een gedeeld ritme. Een endurance event voor ritme, herstel en veerkracht.",
+      "12 uur lang. 5 km per uur. 60 km run.",
     url: "https://12h.run",
     siteName: "12H Run Berkel-Enschot",
     locale: "nl_NL",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "12H Run Berkel-Enschot",
     description:
-      "12 rondes. 12 uur. Een gedeeld ritme. Een endurance event voor ritme, herstel en veerkracht.",
+      "12 uur lang. 5 km per uur. 60 km run.",
     images: ["/social-preview.jpg"]
   },
   icons: {
