@@ -13,22 +13,27 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const apiKey = process.env.KIT_API_KEY;
-  const formId = process.env.KIT_FORM_ID;
+  const formUid = process.env.KIT_FORM_UID;
 
-  if (!apiKey || !formId) {
+  if (!formUid) {
     return NextResponse.json(
       { error: "Aanmelding is tijdelijk niet beschikbaar." },
       { status: 500 }
     );
   }
 
+  // Use the same public subscription endpoint that Kit's embed script uses.
+  // No API key required — the form UID is the public identifier.
+  const body = new URLSearchParams();
+  body.append("email_address", email);
+  body.append("first_name", firstName);
+
   const res = await fetch(
-    `https://api.convertkit.com/v3/forms/${formId}/subscribe`,
+    `https://app.convertkit.com/forms/${formUid}/subscriptions`,
     {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ api_key: apiKey, email, first_name: firstName }),
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: body.toString(),
     }
   );
 
