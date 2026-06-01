@@ -5,14 +5,12 @@ export function WhySection() {
   return (
     <section id="waarom" className="bg-background px-3 py-10 md:px-5">
       <div className="container-page event-shell overflow-hidden !bg-foreground">
-        <div className="border-b border-background/20 px-6 py-4">
-          <h2 className="display-tight text-xl font-black uppercase text-background">
-            Waarom we lopen
-          </h2>
-        </div>
         <div className="flex flex-col md:flex-row md:items-stretch">
           <div className="flex-1 p-6 md:p-10">
             <Reveal>
+              <h2 className="display-tight mb-6 text-xl font-black uppercase text-background">
+                Waarom we lopen
+              </h2>
               <div className="flex flex-col gap-5 text-sm leading-7 text-background/70">
                 <p>
                   Toen onze zoon Boris diabetes type 1 kreeg, werd ik
@@ -34,7 +32,7 @@ export function WhySection() {
                   maken. Help je mee?
                 </p>
               </div>
-              <p className="mt-8 text-sm font-semibold text-background">
+              <p className="mt-8 font-[family-name:var(--font-caveat)] text-2xl text-background">
                 Ruud Dankers
               </p>
             </Reveal>
