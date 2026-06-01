@@ -37,10 +37,10 @@ export function WhySection() {
                 Ruud Dankers
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
-                <Button variant="dark" asChild>
+                <Button variant="secondary" asChild>
                   <a href="mailto:dankersruud@gmail.com">Ik wil deelnemen</a>
                 </Button>
-                <Button variant="dark" asChild>
+                <Button variant="secondary" asChild>
                   <a href="mailto:dankersruud@gmail.com">Ik wil helpen</a>
                 </Button>
               </div>

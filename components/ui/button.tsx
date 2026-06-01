@@ -10,12 +10,12 @@ const buttonVariants = cva(
       variant: {
         default:
           "border-accent bg-accent text-background shadow-[0_0_42px_rgb(240_105_57_/_0.18)] hover:bg-transparent hover:text-accent",
+        secondary:
+          "border-background bg-background text-foreground hover:bg-background/80",
         outline:
           "border-foreground/24 bg-foreground/[0.035] text-foreground backdrop-blur hover:border-accent hover:text-accent",
         ghost:
           "border-transparent bg-transparent text-foreground/70 hover:text-foreground",
-        dark:
-          "border-[#111111] bg-transparent text-[#111111] hover:bg-[#111111]/10"
       },
       size: {
         default: "min-w-36",
