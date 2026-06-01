@@ -18,7 +18,7 @@ export default function ZakelijkDoneren() {
           <div className="container-page [border-inline:none] px-6 pb-16 pt-40 md:px-10 md:pt-52">
             <Reveal>
               <p className="mb-4 text-xs font-bold uppercase tracking-[0.14em] text-accent">
-                12h.run × Zakelijke partners
+                12H Run Berkel-Enschot × Zakelijke partners
               </p>
               <h1 className="display-tight text-5xl font-black uppercase leading-none text-foreground md:text-7xl">
                 Zakelijk<br />Doneren

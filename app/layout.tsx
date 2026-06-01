@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Caveat, Inter } from "next/font/google";
 import localFont from "next/font/local";
 import { BottomNav } from "@/components/sections/bottom-nav";
 import "./globals.css";
@@ -7,6 +7,12 @@ import "./globals.css";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: "swap"
+});
+
+const caveat = Caveat({
+  subsets: ["latin"],
+  variable: "--font-caveat",
   display: "swap"
 });
 
@@ -20,11 +26,11 @@ const benzin = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL("https://12h.run"),
   title: {
-    default: "12h.run Berkel-Enschot",
-    template: "%s | 12h.run"
+    default: "12H Run Berkel-Enschot",
+    template: "%s | 12H Run Berkel-Enschot"
   },
   description:
-    "12h.run is een Nederlandstalige boutique endurance experience: 12 uur, 12 rondes van 5 km, gebouwd rond ritme, herstel en veerkracht voor Stichting DON.",
+    "12H Run Berkel-Enschot is een boutique endurance event: 12 uur, 12 rondes van 5 km, gebouwd rond ritme, herstel en veerkracht voor Stichting DON.",
   keywords: [
     "endurance running event",
     "ultra running Nederland",
@@ -35,11 +41,11 @@ export const metadata: Metadata = {
     "Stichting DON"
   ],
   openGraph: {
-    title: "12h.run",
+    title: "12H Run Berkel-Enschot",
     description:
       "12 rondes. 12 uur. Een gedeeld ritme. Een endurance event voor ritme, herstel en veerkracht.",
     url: "https://12h.run",
-    siteName: "12h.run",
+    siteName: "12H Run Berkel-Enschot",
     locale: "nl_NL",
     type: "website"
   },
@@ -54,7 +60,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="nl" className={`${benzin.variable} ${inter.variable}`}>
+    <html lang="nl" className={`${benzin.variable} ${inter.variable} ${caveat.variable}`}>
       <body>
         <div className="pb-28">{children}</div>
         <BottomNav />

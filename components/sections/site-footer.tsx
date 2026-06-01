@@ -13,8 +13,8 @@ export function SiteFooter() {
             className="h-10 w-auto md:h-12"
           />
           <p className="mt-5 max-w-md text-sm font-medium leading-6 text-foreground/56">
-            12h.run is een kleinschalig endurance event in ontwikkeling voor
-            juni 2027.
+            12H Run Berkel-Enschot is een kleinschalig endurance event in
+            ontwikkeling voor juni 2027.
           </p>
         </div>
         <div className="grid gap-2 text-sm font-bold uppercase tracking-[0.12em] text-foreground/62">

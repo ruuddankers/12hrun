@@ -3,19 +3,19 @@ import { Reveal } from "@/components/motion/reveal";
 export function AboutSection() {
   return (
     <section id="over" className="bg-background px-3 py-10 md:px-5">
-      <div className="container-page event-shell flex flex-col gap-8 p-6 md:flex-row md:items-start md:gap-16 md:p-10">
-        <div className="flex-1">
+      <div className="container-page event-shell p-6 md:p-10">
+        <div className="max-w-3xl">
           <Reveal>
             <h2 className="display-tight text-2xl font-black uppercase leading-tight text-foreground md:text-3xl">
-              12H Run van Berkel-Enschot
+              12H Run Berkel-Enschot
             </h2>
-            <div className="mt-6 flex flex-col gap-5 max-w-prose text-sm leading-7 text-foreground/62">
+            <div className="mt-6 flex flex-col gap-5 text-sm leading-7 text-foreground/62">
               <p>
                 Twaalf uur lang draait alles om het vinden van de juiste
                 balans. Wanneer eet je? Wanneer neem je rust? Kun je nog een
                 ronde op hetzelfde tempo door, of is het slimmer om even gas
                 terug te nemen? Iedere ronde vraagt iets anders van je
-                lichaam. 12H Run van Berkel-Enschot is geen wedstrijd tegen de
+                lichaam. 12H Run Berkel-Enschot is geen wedstrijd tegen de
                 klok. Het is een uitdaging waarin je ieder uur opnieuw aan de
                 start verschijnt voor een ronde van vijf kilometer. Niet om zo
                 snel mogelijk te zijn, maar om slim om te gaan met wat je nog
@@ -39,13 +39,12 @@ export function AboutSection() {
                 aan een toekomst waarin diabetes type 1 minder impact heeft op
                 het dagelijks leven van duizenden mensen.
               </p>
-              <p className="font-semibold text-foreground/80">
+              <p className="font-[family-name:var(--font-caveat)] text-2xl text-accent md:text-3xl">
                 Voor een toekomst zonder diabetes type&nbsp;1.
               </p>
             </div>
           </Reveal>
         </div>
-        <div className="aspect-[4/3] w-full flex-shrink-0 border border-foreground/10 bg-panel md:w-80 lg:w-96" />
       </div>
     </section>
   );

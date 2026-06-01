@@ -18,14 +18,14 @@ export default function Doneren() {
           <div className="container-page [border-inline:none] px-6 pb-16 pt-40 md:px-10 md:pt-52">
             <Reveal>
               <p className="mb-4 text-xs font-bold uppercase tracking-[0.14em] text-accent">
-                12h.run × Stichting DON
+                12H Run Berkel-Enschot × Stichting DON
               </p>
               <h1 className="display-tight text-5xl font-black uppercase leading-none text-foreground md:text-7xl">
                 Doneren
               </h1>
               <p className="mt-6 max-w-xl text-base leading-7 text-foreground/62">
                 Met een donatie steun je direct wetenschappelijk onderzoek naar
-                Type&nbsp;1 diabetes. 12h.run draagt een deel van de opbrengst
+                Type&nbsp;1 diabetes. 12H Run Berkel-Enschot draagt een deel van de opbrengst
                 af aan Stichting DON.
               </p>
             </Reveal>
@@ -43,7 +43,7 @@ export default function Doneren() {
                 NL00 BANK 0000 0000 00
               </p>
               <p className="mt-2 text-sm text-foreground/56">
-                t.n.v. Stichting DON — o.v.v. 12h.run
+                t.n.v. Stichting DON — o.v.v. 12H Run Berkel-Enschot
               </p>
             </div>
             <div className="flex-1">
@@ -74,7 +74,7 @@ export default function Doneren() {
                 <p className="mt-4 max-w-prose text-sm leading-7 text-foreground/62">
                   Stichting DON financiert wetenschappelijk onderzoek dat de
                   kwaliteit van leven verbetert voor mensen met Type&nbsp;1
-                  diabetes. 12h.run is opgezet vanuit een persoonlijke
+                  diabetes. 12H Run Berkel-Enschot is opgezet vanuit een persoonlijke
                   verbinding met dit thema. Iedere editie dragen we bij aan dit
                   werk.
                 </p>
