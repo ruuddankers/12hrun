@@ -39,18 +39,16 @@ export function BottomSection() {
 
   return (
     <div className="bg-background px-3 py-10 md:px-5">
-      <div className="container-page event-shell overflow-hidden md:flex md:divide-x md:divide-foreground/[0.14]">
+      <div className="container-page event-shell overflow-hidden">
 
-        {/* Op de hoogte blijven */}
-        <div id="updates" className="flex-1 overflow-hidden border-b border-foreground/[0.14] md:border-b-0">
-          <div className="border-b border-foreground/[0.14] px-6 py-4">
-            <h2 className="display-tight text-xl font-black uppercase text-foreground">
-              Op de hoogte blijven
-            </h2>
-          </div>
-          <div className="flex flex-col gap-8 p-6 md:flex-row md:items-center md:gap-12 md:p-8">
-            <div className="flex-1">
-              <p className="text-sm leading-7 text-foreground/62">
+        {/* Newsletter */}
+        <div id="updates" className="border-b border-foreground/[0.14] p-6 md:p-10">
+          <div className="flex flex-col gap-8 md:flex-row md:items-center md:gap-16">
+            <div className="md:w-64 shrink-0">
+              <h2 className="display-tight text-xl font-black uppercase text-foreground">
+                Op de hoogte blijven
+              </h2>
+              <p className="mt-3 text-sm leading-7 text-foreground/62">
                 Meld je aan en ontvang updates over 12H Run Berkel-Enschot.
               </p>
             </div>
@@ -97,25 +95,26 @@ export function BottomSection() {
           </div>
         </div>
 
-        {/* Footer */}
-        <footer className="flex flex-1 flex-col gap-10 p-6 md:items-end md:justify-between md:p-8 lg:flex-row lg:items-end">
-          <div>
+        {/* Footer bar */}
+        <footer className="flex items-center justify-between gap-6 px-6 py-5 md:px-10 md:py-6">
+          <div className="flex items-center gap-6">
             <Image
               src="/12h-run-logo-text.svg"
               alt="12h.run"
               width={220}
               height={69}
-              className="h-10 w-auto md:h-12"
+              className="h-8 w-auto md:h-10"
             />
-            <p className="mt-5 text-sm font-medium text-foreground/56">
+            <p className="hidden text-sm font-medium text-foreground/40 md:block">
               12H Run Berkel-Enschot | 23 mei 2027
             </p>
           </div>
-          <div className="grid gap-2 text-sm font-bold uppercase tracking-[0.12em] text-foreground/62">
-            <a href="mailto:hello@12h.run" className="hover:text-foreground">
-              Contact
-            </a>
-          </div>
+          <a
+            href="mailto:hello@12h.run"
+            className="text-sm font-bold uppercase tracking-[0.12em] text-foreground/62 hover:text-foreground"
+          >
+            Contact
+          </a>
         </footer>
 
       </div>
