@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/motion/reveal";
 
 export function WhySection() {
@@ -36,18 +37,12 @@ export function WhySection() {
                 Ruud Dankers
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
-                <a
-                  href="mailto:dankersruud@gmail.com"
-                  className="display-tight border border-[#111111] px-6 py-2.5 text-sm font-black uppercase tracking-[0.1em] text-[#111111] transition-colors hover:bg-accent/10"
-                >
-                  Ik wil deelnemen
-                </a>
-                <a
-                  href="mailto:dankersruud@gmail.com"
-                  className="display-tight border border-[#111111] px-6 py-2.5 text-sm font-black uppercase tracking-[0.1em] text-[#111111] transition-colors hover:bg-accent/10"
-                >
-                  Ik wil helpen
-                </a>
+                <Button variant="dark" asChild>
+                  <a href="mailto:dankersruud@gmail.com">Ik wil deelnemen</a>
+                </Button>
+                <Button variant="dark" asChild>
+                  <a href="mailto:dankersruud@gmail.com">Ik wil helpen</a>
+                </Button>
               </div>
             </Reveal>
           </div>
