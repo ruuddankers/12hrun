@@ -33,7 +33,7 @@ export function AboutSection() {
                 drukke werkdag tot de uren waarin je slaapt: bloedsuikerwaarden
                 spelen altijd mee.
               </p>
-              <p>
+              <p className="mb-6">
                 Met de 12H Run halen we geld op voor onderzoek naar diabetes
                 type 1 en vergroten we de aandacht voor de impact van deze
                 ziekte. We vragen geen medelijden. We nodigen mensen uit om
@@ -41,10 +41,10 @@ export function AboutSection() {
                 aan een toekomst waarin diabetes type 1 minder impact heeft op
                 het dagelijks leven van duizenden mensen.
               </p>
+              <p className="break-inside-avoid font-[family-name:var(--font-caveat)] text-2xl text-accent md:text-3xl">
+                Voor een toekomst zonder diabetes type&nbsp;1.
+              </p>
             </div>
-            <p className="mt-8 font-[family-name:var(--font-caveat)] text-2xl text-accent md:text-3xl">
-              Voor een toekomst zonder diabetes type&nbsp;1.
-            </p>
           </Reveal>
         </div>
       </div>

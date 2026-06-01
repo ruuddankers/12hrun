@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Reveal } from "@/components/motion/reveal";
 
 export function WhySection() {
@@ -9,8 +10,8 @@ export function WhySection() {
             Waarom we lopen
           </h2>
         </div>
-        <div className="flex flex-col gap-8 p-6 md:flex-row md:items-start md:gap-12 md:p-10">
-          <div className="flex-1">
+        <div className="flex flex-col md:flex-row md:items-stretch">
+          <div className="flex-1 p-6 md:p-10">
             <Reveal>
               <div className="flex flex-col gap-5 text-sm leading-7 text-foreground/62">
                 <p>
@@ -38,7 +39,15 @@ export function WhySection() {
               </p>
             </Reveal>
           </div>
-          <div className="aspect-[3/4] w-full flex-shrink-0 border border-foreground/10 bg-panel md:w-64 lg:w-72" />
+          <div className="relative aspect-[3/4] w-full flex-1 overflow-hidden md:aspect-auto">
+            <Image
+              src="/ruud-12h-run.jpg"
+              alt="Ruud Dankers"
+              fill
+              className="object-cover object-top"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
         </div>
       </div>
     </section>
