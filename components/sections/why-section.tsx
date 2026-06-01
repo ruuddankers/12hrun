@@ -4,7 +4,7 @@ import { Reveal } from "@/components/motion/reveal";
 export function WhySection() {
   return (
     <section id="waarom" className="bg-background px-3 py-10 md:px-5">
-      <div className="container-page event-shell overflow-hidden bg-accent">
+      <div className="container-page event-shell overflow-hidden !bg-accent">
         <div className="border-b border-background/20 px-6 py-4">
           <h2 className="display-tight text-xl font-black uppercase text-background">
             Waarom we lopen
@@ -39,7 +39,7 @@ export function WhySection() {
               </p>
             </Reveal>
           </div>
-          <div className="flex-1 overflow-hidden">
+          <div className="flex-1 overflow-hidden p-6 md:p-10">
             <Image
               src="/ruud-12h-run.jpg"
               alt="Ruud Dankers"
