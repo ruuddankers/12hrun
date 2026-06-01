@@ -39,12 +39,13 @@ export function WhySection() {
               </p>
             </Reveal>
           </div>
-          <div className="relative aspect-[3/4] w-full flex-1 overflow-hidden md:aspect-auto">
+          <div className="flex-1 p-6 md:p-10">
             <Image
               src="/ruud-12h-run.jpg"
               alt="Ruud Dankers"
-              fill
-              className="object-cover object-top"
+              width={1000}
+              height={1000}
+              className="w-full h-auto"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
