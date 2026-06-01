@@ -25,7 +25,7 @@ export default function Doneren() {
               </h1>
               <p className="mt-6 max-w-xl text-base leading-7 text-foreground/62">
                 Met een donatie steun je direct wetenschappelijk onderzoek naar
-                Type&nbsp;1 diabetes. 12H Run Berkel-Enschot draagt een deel van de opbrengst
+                Type&nbsp;1 diabetes. 12H Run Berkel-Enschot draagt de volledige opbrengst
                 af aan Stichting DON.
               </p>
             </Reveal>

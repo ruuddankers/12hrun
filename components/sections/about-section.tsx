@@ -19,8 +19,7 @@ export function AboutSection() {
                 balans. Wanneer eet je? Wanneer neem je rust? Kun je nog een
                 ronde op hetzelfde tempo door, of is het slimmer om even gas
                 terug te nemen? Iedere ronde vraagt iets anders van je
-                lichaam. 12H Run Berkel-Enschot is geen wedstrijd tegen de
-                klok. Het is een uitdaging waarin je ieder uur opnieuw aan de
+                lichaam. 12H Run Berkel-Enschot is een uitdaging waarin je ieder uur opnieuw aan de
                 start verschijnt voor een ronde van vijf kilometer. Niet om zo
                 snel mogelijk te zijn, maar om slim om te gaan met wat je nog
                 in de tank hebt. Naarmate de dag vordert, wordt dat steeds

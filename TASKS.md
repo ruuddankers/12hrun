@@ -7,14 +7,7 @@
 
 ## TAKEN DIE JE MOET DOORVOEREN
 
-- op mobiel hoeft de header met logo erin niet sticky te zijn. 
-- op mobiel zit er nog veel ruimte tussen de ticker en de tekst erboven (23 mei 2027). Die mogen gewoon aansluiten zoals eronder.
-- de kaart en vooral de route mogen iets meer ruimte krijgen op mobiel een de bovenkant. De route staat nu dicht op het logo erboven. Niet uitzoomen, maar klein beetje verhogen gewoon.
-- maak eenzelfde blok als 12h run van berkel-enschot voor Sponsors, (logo wall moet dit worden zonder titel, zet hier placholder afbeeldingen) en Info (dit moet een balk worden met 4 vierkanten met icoon en tekst).
-- maak een aparte donatiepagina. in design van de rest, maak zelf een eerste opzet.
-
-
-
+- Ik heb een kit.com account gemaakt voor het versturen van e-mail. Kun je deze integreren in een nieuwe sectie waarbij mensen zich kunnen inschrijven met hun e-mailadres (en voornaam) om op de hoogte te blijven van het evenement? Ik wil het zo native mogelijk binnen deze website bouwen, dus gewoon in een nieuwe section en deze vanzelf in de subscribers bak bij kit.com valt. 
 
 
 ---
