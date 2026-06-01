@@ -16,7 +16,9 @@ export function SiteHeader() {
   return (
     <header
       className={`relative z-40 flex h-20 items-center justify-center transition-all duration-500 md:sticky md:top-0 ${
-        scrolled ? "bg-background/60 backdrop-blur-xl" : "bg-transparent"
+        scrolled
+          ? "border-b border-white/[0.06] bg-[rgba(17,17,17,0.52)] shadow-[0_1px_0_rgba(255,255,255,0.04)] backdrop-blur-3xl backdrop-saturate-[180%]"
+          : "bg-transparent"
       }`}
     >
       <Link href="/" aria-label="12h.run home">
