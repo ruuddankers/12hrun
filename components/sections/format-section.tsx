@@ -1,9 +1,6 @@
 import { Reveal } from "@/components/motion/reveal";
 import { cn } from "@/lib/utils";
 
-const KM_PER_ROUND = 6;
-const HOURS = Array.from({ length: 12 }, (_, i) => i + 1);
-
 const STEPS = [
   {
     number: "01",
@@ -41,7 +38,7 @@ export function FormatSection() {
         </div>
 
         {/* Eén uur */}
-        <div className="grid border-b border-foreground/[0.14] md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
+        <div className="grid md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
           <Reveal className="border-b border-foreground/8 p-6 md:border-b-0 md:border-r md:p-10">
             <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-foreground/40">
               Eén uur
@@ -115,48 +112,6 @@ export function FormatSection() {
                 <span key={mark}>{mark}</span>
               ))}
             </div>
-          </Reveal>
-        </div>
-
-        {/* Twaalf uur */}
-        <div className="p-6 md:p-10">
-          <Reveal>
-            <div className="flex items-end justify-between gap-6">
-              <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-foreground/40">
-                Twaalf keer achter elkaar
-              </p>
-              <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-foreground/40">
-                Afstand na elke ronde
-              </p>
-            </div>
-            <ol className="mt-6 grid grid-cols-3 gap-x-2 gap-y-6 sm:grid-cols-6 lg:grid-cols-12">
-              {HOURS.map((hour) => {
-                const isLast = hour === HOURS.length;
-                return (
-                  <li key={hour}>
-                    <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-foreground/40">
-                      Uur {hour}
-                    </p>
-                    <div className="mt-2 flex h-2 bg-foreground/[0.12]" aria-hidden="true">
-                      <div className="w-[60%] bg-accent" />
-                    </div>
-                    <p
-                      className={cn(
-                        "display-tight mt-3 text-base font-black uppercase md:text-lg",
-                        isLast ? "text-accent" : "text-foreground"
-                      )}
-                    >
-                      {hour * KM_PER_ROUND}
-                      <span className="ml-1 text-[10px] text-foreground/40">km</span>
-                    </p>
-                  </li>
-                );
-              })}
-            </ol>
-            <p className="mt-8 max-w-2xl text-sm leading-7 text-foreground/62">
-              Twaalf starts, twaalf ronden, 72 kilometer. De eerste uren voelen
-              ruim. Daarna gaat het om de keuzes die je tussendoor maakt.
-            </p>
           </Reveal>
         </div>
       </div>
