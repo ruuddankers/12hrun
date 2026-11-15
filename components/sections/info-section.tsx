@@ -40,7 +40,7 @@ function IconHeart() {
 const INFO_ITEMS = [
   { icon: <IconCalendar />, label: "Datum", text: "2027" },
   { icon: <IconMapPin />, label: "Locatie", text: "Berkel-Enschot" },
-  { icon: <IconLoop />, label: "Format", text: "12 ronden · 5 km" },
+  { icon: <IconLoop />, label: "Format", text: "12 ronden · 6 km" },
   { icon: <IconHeart />, label: "Doel", text: "Stichting DON" },
 ];
 

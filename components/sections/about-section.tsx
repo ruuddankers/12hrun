@@ -20,7 +20,7 @@ export function AboutSection() {
                 ronde op hetzelfde tempo door, of is het slimmer om even gas
                 terug te nemen? Iedere ronde vraagt iets anders van je
                 lichaam. 12H van Berkel-Enschot is een uitdaging waarin je ieder uur opnieuw aan de
-                start verschijnt voor een ronde van vijf kilometer. Niet om zo
+                start verschijnt voor een ronde van zes kilometer. Niet om zo
                 snel mogelijk te zijn, maar om slim om te gaan met wat je nog
                 in de tank hebt. Naarmate de dag vordert, wordt dat steeds
                 belangrijker.

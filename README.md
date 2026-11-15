@@ -2,7 +2,7 @@
 
 Nederlandstalige marketingwebsite voor **12HVBE**: een kleinschalige boutique endurance experience rond ritme, herstel en veerkracht.
 
-12HVBE is een 12-uurs running event waarin deelnemers elk uur samen starten voor een ronde van 5 km. De resterende tijd binnen het uur is herstel. De eerste editie is gepland voor juni 2027 in de omgeving van Berkel-Enschot en ondersteunt Stichting DON (Type 1 Diabetes).
+12HVBE is een 12-uurs running event waarin deelnemers elk uur samen starten voor een ronde van 6 km. De resterende tijd binnen het uur is herstel. De eerste editie is gepland voor juni 2027 in de omgeving van Berkel-Enschot en ondersteunt Stichting DON (Type 1 Diabetes).
 
 ## Stack
 

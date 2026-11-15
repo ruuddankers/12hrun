@@ -4,7 +4,7 @@
 
 Nederlandstalige marketingwebsite voor **12HVBE**: een boutique endurance running event in juni 2027 in Berkel-Enschot, georganiseerd ten behoeve van Stichting DON (Type 1 Diabetes).
 
-Format: deelnemers starten elk uur samen voor een ronde van 5 km. De resterende tijd binnen het uur is herstel. 12 ronden in 12 uur.
+Format: deelnemers starten elk uur samen voor een ronde van 6 km. De resterende tijd binnen het uur is herstel. 12 ronden in 12 uur.
 
 ## Tech Stack
 

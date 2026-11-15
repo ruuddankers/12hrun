@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     template: "%s | 12HVBE"
   },
   description:
-    "12H van Berkel-Enschot is een boutique endurance event: 12 uur, 12 rondes van 5 km, gebouwd rond ritme, herstel en veerkracht voor Stichting DON.",
+    "12H van Berkel-Enschot is een boutique endurance event: 12 uur, 12 rondes van 6 km, gebouwd rond ritme, herstel en veerkracht voor Stichting DON.",
   keywords: [
     "endurance running event",
     "ultra running Nederland",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "12H van Berkel-Enschot",
     description:
-      "5 km per uur. 12 uur lang. 60 km hardlopen. 1 gezamenlijk doel.",
+      "6 km per uur. 12 uur lang. 72 km hardlopen. 1 gezamenlijk doel.",
     url: "https://12h.run",
     siteName: "12HVBE",
     locale: "nl_NL",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "12H van Berkel-Enschot",
     description:
-      "5 km per uur. 12 uur lang. 60 km hardlopen. 1 gezamenlijk doel.",
+      "6 km per uur. 12 uur lang. 72 km hardlopen. 1 gezamenlijk doel.",
     images: ["/social-preview.jpg"]
   },
   icons: {

@@ -22,9 +22,9 @@ export function ConceptSection() {
       />
       <Reveal className="relative mx-auto w-[min(100%-1.25rem,1340px)] px-6">
         <h1 className="display-tight grid gap-1 text-[clamp(1.125rem,5vw,4.5rem)] font-black uppercase leading-[1.02] text-foreground md:gap-2">
-          <span>5 KM per uur.</span>
+          <span>6 KM per uur.</span>
           <span>12 uur lang.</span>
-          <span>60 KM hardlopen.</span>
+          <span>72 KM hardlopen.</span>
           <span className="text-accent">1 gezamenlijk doel.</span>
         </h1>
       </Reveal>
