@@ -13,7 +13,6 @@ import {
 import { cn } from "@/lib/utils";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
-const HOURS = Array.from({ length: 12 }, (_, i) => i);
 
 const LINES = [
   { value: 6, first: "KM", second: "per uur." },
@@ -41,40 +40,6 @@ function CountUp({ value, delay }: { value: number; delay: number }) {
   }, [value, delay, reduceMotion]);
 
   return <>{display}</>;
-}
-
-function HourPulse() {
-  const reduceMotion = useReducedMotion();
-  const [hour, setHour] = useState(0);
-
-  useEffect(() => {
-    if (reduceMotion) return;
-    const timer = setInterval(() => setHour((h) => (h + 1) % 12), 1000);
-    return () => clearInterval(timer);
-  }, [reduceMotion]);
-
-  return (
-    <div aria-hidden="true" className="mt-10 md:mt-16">
-      <div className="flex gap-1.5">
-        {HOURS.map((i) => (
-          <span
-            key={i}
-            className={cn(
-              "h-1 flex-1 transition-colors duration-700 ease-out md:h-1.5 md:max-w-16",
-              reduceMotion || i <= hour ? "bg-accent" : "bg-foreground/15"
-            )}
-          />
-        ))}
-      </div>
-      <p className="mt-3 text-[10px] font-bold uppercase tracking-[0.14em] text-foreground/50">
-        Uur{" "}
-        <span className="tabular-nums text-foreground">
-          {String((reduceMotion ? 11 : hour) + 1).padStart(2, "0")}
-        </span>{" "}
-        / 12
-      </p>
-    </div>
-  );
 }
 
 export function ConceptSection() {
@@ -145,11 +110,11 @@ export function ConceptSection() {
         className="relative mx-auto w-[min(100%-1.25rem,1340px)] px-6"
         style={reduceMotion ? undefined : { y: contentY, opacity: contentOpacity }}
       >
-        <h1 className="display-tight grid gap-3 font-black uppercase leading-[1.02] text-foreground md:gap-2 md:text-[clamp(2rem,5vw,4.5rem)]">
+        <h1 className="display-tight grid gap-1 font-black uppercase leading-[1.02] text-foreground md:gap-2 md:text-[clamp(2rem,5vw,4.5rem)]">
           {LINES.map((line, i) => {
             const delay = 0.35 + i * 0.16;
             return (
-              <span key={line.value} className="block overflow-hidden">
+              <span key={line.value} className="block overflow-hidden pt-[0.08em]">
                 <motion.span
                   className={cn(
                     "flex items-center gap-[3vw] md:items-baseline md:gap-[0.32em]",
@@ -159,7 +124,7 @@ export function ConceptSection() {
                   animate={{ y: 0 }}
                   transition={{ duration: 1, delay, ease: EASE }}
                 >
-                  <span className="w-[29vw] shrink-0 text-[17vw] leading-[0.9] tabular-nums md:w-auto md:text-[length:inherit] md:leading-[inherit]">
+                  <span className="w-[29vw] shrink-0 text-right text-[17vw] leading-none tabular-nums md:text-left md:w-auto md:text-[length:inherit] md:leading-[inherit]">
                     <CountUp value={line.value} delay={delay + 0.2} />
                   </span>
                   <span className="text-[4.2vw] leading-[1.1] md:text-[length:inherit] md:leading-[inherit]">
@@ -171,13 +136,6 @@ export function ConceptSection() {
             );
           })}
         </h1>
-        <motion.div
-          initial={reduceMotion ? false : { opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.9, delay: 1.3, ease: "easeOut" }}
-        >
-          <HourPulse />
-        </motion.div>
       </motion.div>
     </section>
   );
