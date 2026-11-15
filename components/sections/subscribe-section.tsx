@@ -48,7 +48,7 @@ export function SubscribeSection() {
         <div className="flex flex-col gap-8 p-6 md:flex-row md:items-center md:gap-16 md:p-10">
           <div className="flex-1">
             <p className="text-sm leading-7 text-foreground/62">
-              Meld je aan en ontvang updates over 12H Run
+              Meld je aan en ontvang updates over 12H van
               Berkel-Enschot.
             </p>
           </div>

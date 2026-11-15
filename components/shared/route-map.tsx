@@ -143,7 +143,7 @@ export function RouteMap() {
 
         const route = leaflet
           .polyline(points, {
-            color: "#F06939",
+            color: "#92E4BA",
             weight: 6,
             opacity: 1,
             lineCap: "round",
@@ -155,7 +155,7 @@ export function RouteMap() {
           .circleMarker(points[0], {
             radius: 4,
             color: "#E9E9E7",
-            fillColor: "#F06939",
+            fillColor: "#92E4BA",
             fillOpacity: 1,
             weight: 2
           })

@@ -1,19 +1,19 @@
-# DESIGN.md — 12h.run Design System
+# DESIGN.md — 12HVBE Design System
 
-> Dit document definieert de visuele taal en UX-principes van de 12h.run website.
+> Dit document definieert de visuele taal en UX-principes van de 12HVBE website.
 > Gebruik dit als leidraad bij elk nieuw component of elke nieuwe sectie.
 
 ---
 
 ## Ontwerpfilosofie
 
-12h.run voelt aan als een filmische, zelfverzekerde site. Geen visueel geschreeuw, geen overvolle secties. Elk element heeft een reden om er te zijn. De site ademt rust, maar straalt kwaliteit uit in elk detail.
+12HVBE voelt aan als een filmische, zelfverzekerde site. Geen visueel geschreeuw, geen overvolle secties. Elk element heeft een reden om er te zijn. De site ademt rust, maar straalt kwaliteit uit in elk detail.
 
 **Drie kernprincipes:**
 
 1. **Filmisch en ingetogen.** De ervaring van het event — ritme, rust, herhaling — weerspiegelt zich in de site. Genereuze witruimte, rustige beweging, geen sportmarketingclichés.
 2. **Content-first.** Tekst, beeld en de route staan centraal. Navigatie en chrome treden terug.
-3. **Eén accent.** Oranje (#f06939) is het enige accentkleur. Gebruik het spaarzaam — maximaal één of twee geaccentueerde elementen per sectie.
+3. **Eén accent.** Mintgroen (#92E4BA) is het enige accentkleur. Gebruik het spaarzaam — maximaal één of twee geaccentueerde elementen per sectie.
 
 **Referentie-gevoel:** Merken als Arc'teryx, Rapha of Kinfolk — premium, rustig, iets technisch maar niet koel.
 
@@ -26,7 +26,7 @@
 ```css
 --color-background: #111111    /* Hoofdachtergrond — true black voor OLED */
 --color-foreground: #e9e9e7    /* Primaire tekst — warm off-white */
---color-accent:     #f06939    /* Accentkleur — oranje */
+--color-accent:     #92E4BA    /* Accentkleur — mintgroen */
 --color-muted:      #9d9d97    /* Secundaire tekst, placeholders */
 --color-panel:      #171717    /* Verhoogd oppervlak (cards, panels) */
 --color-line:       rgb(233 233 231 / 0.14)  /* Subtiele lijnen en randen */
@@ -40,12 +40,12 @@
 | Lopende tekst | `--color-foreground` (#e9e9e7) |
 | Labels, meta, subtitels | `--color-muted` (#9d9d97) |
 | Kaarten, panels, footer | `--color-panel` (#171717) |
-| Interactieve elementen, accenten | `--color-accent` (#f06939) |
+| Interactieve elementen, accenten | `--color-accent` (#92E4BA) |
 | Borders, dividers | `--color-line` |
 
 ### Regels
 
-- Gebruik oranje **spaarzaam**: logo, animatie-dots, interactieve hover-states, één CTA per scherm.
+- Gebruik mintgroen **spaarzaam**: logo, animatie-dots, interactieve hover-states, één CTA per scherm.
 - Gebruik nooit pure witte (#FFFFFF) tekst — gebruik `--color-foreground` (#e9e9e7) voor warmte.
 - Geen gradients als achtergrond. Subtiele radiale overlays op de kaart zijn toegestaan als functioneel visueel element.
 - Alle oppervlakken zijn donker — er is geen light mode.
@@ -162,8 +162,8 @@ Type:            Client component ("use client")
 Hoogte:          68vh
 Filter:          grayscale + opacity 80%
 Basemap:         CartoDB Dark Matter
-Accentkleur:     --color-accent (#f06939) voor route-lijn
-Markers:         Oranje start, zwart einde
+Accentkleur:     --color-accent (#92E4BA) voor route-lijn
+Markers:         Mintgroen start, zwart einde
 ```
 
 - Lazy-loaded Leaflet (CDN) — geen npm installatie
@@ -177,7 +177,7 @@ Markers:         Oranje start, zwart einde
 Structuur:       12 dots in cirkel (30° per stap)
 Animatie:        Opacity pulse + scale + glow — oneindige loop
 Duur:            4.8s, staggered (0.18s delay per dot)
-Kleur:           --color-accent (#f06939)
+Kleur:           --color-accent (#92E4BA)
 Modi:            compact (8–14px dots) of full (14–22px dots)
 ```
 
@@ -201,7 +201,7 @@ Configuratie:    delay prop voor gestapt verschijnen
 
 ```
 Varianten:
-  default    bg-accent (#f06939), witte tekst, glow-shadow
+  default    bg-accent (#92E4BA), witte tekst, glow-shadow
   outline    subtiele border, bg-tint, hover → accent
   ghost      transparant, lage opacity, hover → vol
 

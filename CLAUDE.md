@@ -1,8 +1,8 @@
-# CLAUDE.md — 12h.run Website
+# CLAUDE.md — 12HVBE Website
 
 ## Projectoverzicht
 
-Nederlandstalige marketingwebsite voor **12h.run**: een boutique endurance running event in juni 2027 in Berkel-Enschot, georganiseerd ten behoeve van Stichting DON (Type 1 Diabetes).
+Nederlandstalige marketingwebsite voor **12HVBE**: een boutique endurance running event in juni 2027 in Berkel-Enschot, georganiseerd ten behoeve van Stichting DON (Type 1 Diabetes).
 
 Format: deelnemers starten elk uur samen voor een ronde van 5 km. De resterende tijd binnen het uur is herstel. 12 ronden in 12 uur.
 
@@ -42,8 +42,8 @@ Format: deelnemers starten elk uur samen voor een ronde van 5 km. De resterende 
 ├── lib/
 │   └── utils.ts           # cn() helper + interestMailto constante
 ├── public/
-│   ├── 12h-run-logo-text.svg
-│   ├── 12hrun-logo.svg
+│   ├── 12hvbe-wordmark.svg
+│   ├── 12hvbe-logo.svg
 │   ├── favicon.svg
 │   ├── route-12hrun.gpx   # GPX routedata voor kaart
 │   └── fonts/
@@ -97,7 +97,7 @@ Format: deelnemers starten elk uur samen voor een ronde van 5 km. De resterende 
 ```
 Achtergrond:    #111111   (true black)
 Tekst:          #e9e9e7   (off-white)
-Accent:         #f06939   (oranje)
+Accent:         #92E4BA   (mintgroen)
 Muted:          #9d9d97   (grijs)
 Panel:          #171717   (elevated surface)
 ```

@@ -6,7 +6,7 @@ const NAMES = [
 
 const TICKER_ITEMS = NAMES.flatMap((name, i) => [
   <span key={`n-${i}`}>{name}</span>,
-  <span key={`s-${i}`} className="px-[0.3em] text-white">&</span>,
+  <span key={`s-${i}`} className="px-[0.3em] text-background/60">&</span>,
 ]);
 
 function TickerRow({ duration = "60s" }: { duration?: string }) {

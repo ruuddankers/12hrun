@@ -1,4 +1,4 @@
-# Agent Instructies — 12h.run
+# Agent Instructies — 12HVBE
 
 Dit bestand bevat instructies voor zowel **Claude Code** als **Codex**. Beide kunnen als AI-assistent gebruikt worden voor dit project; de instructies staan naast elkaar zodat je makkelijk kunt wisselen.
 
@@ -11,7 +11,7 @@ Dit bestand bevat instructies voor zowel **Claude Code** als **Codex**. Beide ku
 - Gebruik de bestaande stack: Next.js 15 App Router, TypeScript strict, Tailwind CSS 4, Framer Motion, Vercel.
 - Houd UI copy in het **Nederlands** tenzij expliciet anders gevraagd.
 - Behoud de merkidentiteit: minimaal, filmisch, ingetogen, premium, emotioneel gegrond.
-- Gebruik de bestaande kleuren: `#111111`, `#e9e9e7`, `#f06939`.
+- Gebruik de bestaande kleuren: `#111111`, `#e9e9e7`, `#92E4BA`.
 - Wijzigingen beperken tot wat gevraagd is — geen refactor zonder opdracht, geen extra features.
 - Verifieer met `npm run build` als dependencies of configuratie gewijzigd zijn.
 - Lees bestanden eerst voor je ze wijzigt.
@@ -66,7 +66,7 @@ Claude Code beheert subagents automatisch op basis van de taak. Je kunt ook expl
 - Use the project stack already present: Next.js App Router, TypeScript, Tailwind CSS, shadcn-style components, Framer Motion, and Vercel.
 - Keep visible UI copy in Dutch unless the user explicitly asks otherwise.
 - Preserve the brand feel: minimal, cinematic, restrained, premium, endurance-focused, and emotionally grounded.
-- Use the existing colors: `#111111`, `#E9E9E7`, and `#F06939`.
+- Use the existing colors: `#111111`, `#E9E9E7`, and `#92E4BA`.
 - Keep changes scoped and verify with `npm run build` when dependencies are available.
 - Prefer small, focused commits with clear messages.
 

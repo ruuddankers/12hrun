@@ -1,25 +1,19 @@
 import { Reveal } from "@/components/motion/reveal";
-import { RouteMap } from "@/components/shared/route-map";
 
 export function ConceptSection() {
   return (
     <section
       id="concept"
-      className="relative -mt-20 overflow-hidden bg-background px-0 md:min-h-svh"
+      className="relative bg-background px-6 pb-16 pt-12 text-center md:px-10 md:pb-28 md:pt-24"
     >
-      <RouteMap />
-      <div className="pointer-events-none relative z-10 -mt-28 mx-auto w-full max-w-[1340px] px-6 pb-4 pt-0 text-center md:-mt-48 md:px-10 md:pb-28">
-        <Reveal>
-          <h1 className="display-tight mx-auto grid max-w-4xl gap-2 text-4xl font-black uppercase leading-[1.02] text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
-            <span>12 uur lang.</span>
-            <span>5 KM per uur.</span>
-            <span>60 KM RUN.</span>
-          </h1>
-          <p className="display-tight mt-8 text-sm font-black uppercase text-accent md:text-base">
-            2027 - Berkel-Enschot
-          </p>
-        </Reveal>
-      </div>
+      <Reveal>
+        <h1 className="display-tight mx-auto grid max-w-7xl gap-1 text-[clamp(1.25rem,5.6vw,4.5rem)] font-black uppercase leading-[1.02] text-foreground md:gap-2">
+          <span>5 KM per uur.</span>
+          <span>12 uur lang.</span>
+          <span>60 KM hardlopen.</span>
+          <span className="text-accent">1 gezamenlijk doel.</span>
+        </h1>
+      </Reveal>
     </section>
   );
 }

@@ -1,8 +1,8 @@
-# 12h.run
+# 12HVBE
 
-Nederlandstalige marketingwebsite voor **12h.run**: een kleinschalige boutique endurance experience rond ritme, herstel en veerkracht.
+Nederlandstalige marketingwebsite voor **12HVBE**: een kleinschalige boutique endurance experience rond ritme, herstel en veerkracht.
 
-12h.run is een 12-uurs running event waarin deelnemers elk uur samen starten voor een ronde van 5 km. De resterende tijd binnen het uur is herstel. De eerste editie is gepland voor juni 2027 in de omgeving van Berkel-Enschot en ondersteunt Stichting DON (Type 1 Diabetes).
+12HVBE is een 12-uurs running event waarin deelnemers elk uur samen starten voor een ronde van 5 km. De resterende tijd binnen het uur is herstel. De eerste editie is gepland voor juni 2027 in de omgeving van Berkel-Enschot en ondersteunt Stichting DON (Type 1 Diabetes).
 
 ## Stack
 
@@ -58,8 +58,8 @@ components/
 lib/
   utils.ts            # cn() helper, interestMailto
 public/
-  12h-run-logo-text.svg
-  12hrun-logo.svg
+  12hvbe-wordmark.svg
+  12hvbe-logo.svg
   favicon.svg
   route-12hrun.gpx   # GPX routedata
   fonts/
@@ -77,7 +77,7 @@ Kleuren:
 ```
 #111111  achtergrond (true black)
 #E9E9E7  tekst (off-white)
-#F06939  accent (oranje)
+#92E4BA  accent (mintgroen)
 #9d9d97  muted (grijs)
 ```
 

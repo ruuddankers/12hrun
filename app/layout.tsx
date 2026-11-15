@@ -26,11 +26,11 @@ const benzin = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL("https://12h.run"),
   title: {
-    default: "12H Run Berkel-Enschot",
-    template: "%s | 12H Run Berkel-Enschot"
+    default: "12HVBE | 12 uur van Berkel-Enschot",
+    template: "%s | 12HVBE"
   },
   description:
-    "12H Run Berkel-Enschot is een boutique endurance event: 12 uur, 12 rondes van 5 km, gebouwd rond ritme, herstel en veerkracht voor Stichting DON.",
+    "12H van Berkel-Enschot is een boutique endurance event: 12 uur, 12 rondes van 5 km, gebouwd rond ritme, herstel en veerkracht voor Stichting DON.",
   keywords: [
     "endurance running event",
     "ultra running Nederland",
@@ -41,11 +41,11 @@ export const metadata: Metadata = {
     "Stichting DON"
   ],
   openGraph: {
-    title: "12H Run Berkel-Enschot",
+    title: "12H van Berkel-Enschot",
     description:
-      "12 uur lang. 5 km per uur. 60 km run.",
+      "5 km per uur. 12 uur lang. 60 km hardlopen. 1 gezamenlijk doel.",
     url: "https://12h.run",
-    siteName: "12H Run Berkel-Enschot",
+    siteName: "12HVBE",
     locale: "nl_NL",
     type: "website",
     images: [
@@ -53,15 +53,15 @@ export const metadata: Metadata = {
         url: "/social-preview.jpg",
         width: 1200,
         height: 630,
-        alt: "12H Run Berkel-Enschot"
+        alt: "12H van Berkel-Enschot"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "12H Run Berkel-Enschot",
+    title: "12H van Berkel-Enschot",
     description:
-      "12 uur lang. 5 km per uur. 60 km run.",
+      "5 km per uur. 12 uur lang. 60 km hardlopen. 1 gezamenlijk doel.",
     images: ["/social-preview.jpg"]
   },
   icons: {

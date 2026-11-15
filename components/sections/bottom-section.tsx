@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { BrandLogo } from "@/components/shared/brand-logo";
 import { useState } from "react";
 
 type Status = "idle" | "loading" | "success" | "error";
@@ -49,7 +49,7 @@ export function BottomSection() {
                 Op de hoogte blijven
               </h2>
               <p className="mt-3 text-sm leading-7 text-foreground/62">
-                Meld je aan en ontvang updates over 12H Run Berkel-Enschot.
+                Meld je aan en ontvang updates over 12H van Berkel-Enschot.
               </p>
             </div>
             <div className="flex-1">
@@ -98,15 +98,9 @@ export function BottomSection() {
         {/* Footer bar */}
         <footer className="flex items-center justify-between gap-6 px-6 py-5 md:px-10 md:py-6">
           <div className="flex items-center gap-6">
-            <Image
-              src="/12h-run-logo-text.svg"
-              alt="12h.run"
-              width={220}
-              height={69}
-              className="h-8 w-auto md:h-10"
-            />
+            <BrandLogo />
             <p className="hidden text-sm font-medium text-foreground/40 md:block">
-              12H Run Berkel-Enschot | 2027
+              12H van Berkel-Enschot | 2027
             </p>
           </div>
           <a

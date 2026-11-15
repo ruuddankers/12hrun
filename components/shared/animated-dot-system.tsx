@@ -19,7 +19,7 @@ export function AnimatedDotSystem({
         compact && "w-20",
         className
       )}
-      aria-label="12h.run ritmesymbool"
+      aria-label="12HVBE ritmesymbool"
     >
       {dots.map((dot) => {
         const angle = dot * 30 - 90;
@@ -41,9 +41,9 @@ export function AnimatedDotSystem({
               opacity: [0.32, 1, 0.32],
               scale: [0.92, 1.08, 0.92],
               boxShadow: [
-                "0 0 0px rgba(240,105,57,0)",
-                "0 0 24px rgba(240,105,57,0.32)",
-                "0 0 0px rgba(240,105,57,0)"
+                "0 0 0px rgba(146,228,186,0)",
+                "0 0 24px rgba(146,228,186,0.32)",
+                "0 0 0px rgba(146,228,186,0)"
               ]
             }}
             transition={{
