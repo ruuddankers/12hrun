@@ -1,33 +1,184 @@
-import Image from "next/image";
+"use client";
 
-import { Reveal } from "@/components/motion/reveal";
+import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
+import {
+  animate,
+  motion,
+  useReducedMotion,
+  useScroll,
+  useTransform
+} from "framer-motion";
+
+import { cn } from "@/lib/utils";
+
+const EASE = [0.22, 1, 0.36, 1] as const;
+const HOURS = Array.from({ length: 12 }, (_, i) => i);
+
+const LINES = [
+  { value: 6, first: "KM", second: "per uur." },
+  { value: 12, first: "uur", second: "lang." },
+  { value: 72, first: "KM", second: "hardlopen." },
+  { value: 1, first: "gezamenlijk", second: "doel.", accent: true }
+];
+
+function CountUp({ value, delay }: { value: number; delay: number }) {
+  const reduceMotion = useReducedMotion();
+  const [display, setDisplay] = useState(value);
+
+  useEffect(() => {
+    if (reduceMotion || !window.matchMedia("(max-width: 767px)").matches) {
+      return;
+    }
+    setDisplay(0);
+    const controls = animate(0, value, {
+      duration: 1.4,
+      delay,
+      ease: EASE,
+      onUpdate: (latest) => setDisplay(Math.round(latest))
+    });
+    return () => controls.stop();
+  }, [value, delay, reduceMotion]);
+
+  return <>{display}</>;
+}
+
+function HourPulse() {
+  const reduceMotion = useReducedMotion();
+  const [hour, setHour] = useState(0);
+
+  useEffect(() => {
+    if (reduceMotion) return;
+    const timer = setInterval(() => setHour((h) => (h + 1) % 12), 1000);
+    return () => clearInterval(timer);
+  }, [reduceMotion]);
+
+  return (
+    <div aria-hidden="true" className="mt-10 md:mt-16">
+      <div className="flex gap-1.5">
+        {HOURS.map((i) => (
+          <span
+            key={i}
+            className={cn(
+              "h-1 flex-1 transition-colors duration-700 ease-out md:h-1.5 md:max-w-16",
+              reduceMotion || i <= hour ? "bg-accent" : "bg-foreground/15"
+            )}
+          />
+        ))}
+      </div>
+      <p className="mt-3 text-[10px] font-bold uppercase tracking-[0.14em] text-foreground/50">
+        Uur{" "}
+        <span className="tabular-nums text-foreground">
+          {String((reduceMotion ? 11 : hour) + 1).padStart(2, "0")}
+        </span>{" "}
+        / 12
+      </p>
+    </div>
+  );
+}
 
 export function ConceptSection() {
+  const ref = useRef<HTMLElement>(null);
+  const reduceMotion = useReducedMotion();
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"]
+  });
+  const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "18%"]);
+  const contentY = useTransform(scrollYProgress, [0, 1], ["0%", "-14%"]);
+  const contentOpacity = useTransform(scrollYProgress, [0, 0.75], [1, 0]);
+
   return (
     <section
+      ref={ref}
       id="concept"
-      className="relative -mt-20 overflow-hidden bg-background px-3 pb-20 pt-36 md:px-5 md:pb-36 md:pt-52"
+      className="relative -mt-20 flex min-h-svh flex-col justify-end overflow-hidden bg-background px-3 pb-36 pt-28 md:block md:min-h-0 md:px-5 md:pb-36 md:pt-52"
     >
-      <Image
-        src="/hero-runners.webp"
-        alt=""
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover opacity-40"
-      />
-      <div
+      <motion.div
         aria-hidden="true"
-        className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/20 to-background"
-      />
-      <Reveal className="relative mx-auto w-[min(100%-1.25rem,1340px)] px-6">
-        <h1 className="display-tight grid gap-1 text-[clamp(1.125rem,5vw,4.5rem)] font-black uppercase leading-[1.02] text-foreground md:gap-2">
-          <span>6 KM per uur.</span>
-          <span>12 uur lang.</span>
-          <span>72 KM hardlopen.</span>
-          <span className="text-accent">1 gezamenlijk doel.</span>
+        className="absolute inset-0"
+        style={reduceMotion ? undefined : { y: imageY }}
+      >
+        <motion.div
+          className="absolute inset-0"
+          initial={reduceMotion ? false : { scale: 1.18, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 2.6, ease: EASE }}
+        >
+          <Image
+            src="/hero-runners.webp"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-[68%_50%] opacity-55 md:object-center md:opacity-40"
+          />
+        </motion.div>
+      </motion.div>
+
+      {/* Beeldmerk als langzaam draaiende klok */}
+      <motion.div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-[42vw] -top-[18vw] w-[120vw] md:-right-[14vw] md:-top-[16vw] md:w-[52vw]"
+        initial={reduceMotion ? false : { opacity: 0, scale: 0.86 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 2.2, delay: 0.2, ease: EASE }}
+      >
+        <motion.div
+          className="opacity-[0.14] md:opacity-[0.07]"
+          animate={reduceMotion ? undefined : { rotate: 360 }}
+          transition={{ duration: 144, ease: "linear", repeat: Infinity }}
+        >
+          <Image
+            src="/12hvbe-logo.svg"
+            alt=""
+            width={1023}
+            height={1204}
+            className="h-auto w-full"
+          />
+        </motion.div>
+      </motion.div>
+
+      <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/10 to-background" />
+
+      <motion.div
+        className="relative mx-auto w-[min(100%-1.25rem,1340px)] px-6"
+        style={reduceMotion ? undefined : { y: contentY, opacity: contentOpacity }}
+      >
+        <h1 className="display-tight grid gap-3 font-black uppercase leading-[1.02] text-foreground md:gap-2 md:text-[clamp(2rem,5vw,4.5rem)]">
+          {LINES.map((line, i) => {
+            const delay = 0.35 + i * 0.16;
+            return (
+              <span key={line.value} className="block overflow-hidden">
+                <motion.span
+                  className={cn(
+                    "flex items-center gap-[3vw] md:items-baseline md:gap-[0.32em]",
+                    line.accent && "text-accent"
+                  )}
+                  initial={reduceMotion ? false : { y: "110%" }}
+                  animate={{ y: 0 }}
+                  transition={{ duration: 1, delay, ease: EASE }}
+                >
+                  <span className="w-[29vw] shrink-0 text-[17vw] leading-[0.9] tabular-nums md:w-auto md:text-[length:inherit] md:leading-[inherit]">
+                    <CountUp value={line.value} delay={delay + 0.2} />
+                  </span>
+                  <span className="text-[4.2vw] leading-[1.1] md:text-[length:inherit] md:leading-[inherit]">
+                    {line.first}
+                    <br className="md:hidden" /> {line.second}
+                  </span>
+                </motion.span>
+              </span>
+            );
+          })}
         </h1>
-      </Reveal>
+        <motion.div
+          initial={reduceMotion ? false : { opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.9, delay: 1.3, ease: "easeOut" }}
+        >
+          <HourPulse />
+        </motion.div>
+      </motion.div>
     </section>
   );
 }
