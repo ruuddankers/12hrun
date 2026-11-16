@@ -1,13 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   animate,
   motion,
-  useReducedMotion,
-  useScroll,
-  useTransform
+  useReducedMotion
 } from "framer-motion";
 
 import { cn } from "@/lib/utils";
@@ -43,27 +41,14 @@ function CountUp({ value, delay }: { value: number; delay: number }) {
 }
 
 export function ConceptSection() {
-  const ref = useRef<HTMLElement>(null);
   const reduceMotion = useReducedMotion();
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"]
-  });
-  const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "18%"]);
-  const contentY = useTransform(scrollYProgress, [0, 1], ["0%", "-14%"]);
-  const contentOpacity = useTransform(scrollYProgress, [0, 0.75], [1, 0]);
 
   return (
     <section
-      ref={ref}
       id="concept"
       className="relative -mt-20 flex min-h-svh flex-col justify-end overflow-hidden bg-background px-3 pb-36 pt-28 md:block md:min-h-0 md:px-5 md:pb-36 md:pt-52"
     >
-      <motion.div
-        aria-hidden="true"
-        className="absolute inset-0"
-        style={reduceMotion ? undefined : { y: imageY }}
-      >
+      <div aria-hidden="true" className="absolute inset-0">
         <motion.div
           className="absolute inset-0"
           initial={reduceMotion ? false : { scale: 1.18, opacity: 0 }}
@@ -79,7 +64,7 @@ export function ConceptSection() {
             className="object-cover object-[68%_50%] opacity-55 md:object-center md:opacity-40"
           />
         </motion.div>
-      </motion.div>
+      </div>
 
       {/* Beeldmerk als langzaam draaiende klok */}
       <motion.div
@@ -89,11 +74,7 @@ export function ConceptSection() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 2.2, delay: 0.2, ease: EASE }}
       >
-        <motion.div
-          className="opacity-[0.14] md:opacity-[0.07]"
-          animate={reduceMotion ? undefined : { rotate: 360 }}
-          transition={{ duration: 144, ease: "linear", repeat: Infinity }}
-        >
+        <div className="animate-[spin_144s_linear_infinite] opacity-[0.14] will-change-transform motion-reduce:animate-none md:opacity-[0.07]">
           <Image
             src="/12hvbe-logo.svg"
             alt=""
@@ -101,15 +82,12 @@ export function ConceptSection() {
             height={1204}
             className="h-auto w-full"
           />
-        </motion.div>
+        </div>
       </motion.div>
 
       <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/10 to-background" />
 
-      <motion.div
-        className="relative mx-auto w-[min(100%-1.25rem,1340px)] px-6"
-        style={reduceMotion ? undefined : { y: contentY, opacity: contentOpacity }}
-      >
+      <div className="relative mx-auto w-[min(100%-1.25rem,1340px)] px-6">
         <h1 className="display-tight grid gap-1 font-black uppercase leading-[1.02] text-foreground md:gap-2 md:text-[clamp(2rem,5vw,4.5rem)]">
           {LINES.map((line, i) => {
             const delay = 0.35 + i * 0.16;
@@ -136,7 +114,7 @@ export function ConceptSection() {
             );
           })}
         </h1>
-      </motion.div>
+      </div>
     </section>
   );
 }

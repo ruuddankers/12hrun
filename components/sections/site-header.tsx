@@ -20,7 +20,7 @@ export function SiteHeader() {
         aria-label="12HVBE home"
         className={`rounded-[20px] px-6 py-3 transition-all duration-500 ${
           scrolled
-            ? "border border-white/[0.09] bg-[rgba(17,17,17,0.52)] shadow-[inset_0_1px_0_rgba(255,255,255,0.07)] backdrop-blur-3xl backdrop-saturate-[180%] md:shadow-[0_8px_40px_rgba(0,0,0,0.55),inset_0_1px_0_rgba(255,255,255,0.07)]"
+            ? "border border-transparent md:border-white/[0.09] md:bg-[rgba(17,17,17,0.52)] md:shadow-[0_8px_40px_rgba(0,0,0,0.55),inset_0_1px_0_rgba(255,255,255,0.07)] md:backdrop-blur-3xl md:backdrop-saturate-[180%]"
             : "border border-transparent bg-transparent"
         }`}
       >
